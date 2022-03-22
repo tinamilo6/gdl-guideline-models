@@ -10,20 +10,30 @@ language
 description
 	original_author = <
 		["date"] = <"2022-02-25">
+		["name"] = <"Clarisse Look, Soyun Lee">
+		["organisation"] = <"Karolinska Institute">
+		["email"] = <"clarisse.look@stud.ki.se, soyun.lee@stud.ki.se">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To record the results for each component parameter for the PECARN Pediatric Head Injury Trauma Algorithm">
+			keywords = <"PECARN, pediatric head injury, CT imaging, assessment, algorithm", ...>
+			use = <"Use to record the results for each component parameter for the PECARN Pediatric Head Injury Trauma Algorithm">
+			misuse = <"Should not be used for patients 18 years and older">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"[1] Kuppermann N, Holmes JF, Dayan PS, Hoyle JD Jr, Atabaki SM, Holubkov R et al. Identification of children at very low risk of clinically-important brain injuries after head trauma: a prospective cohort study. Lancet. 2009 Oct 3;374(9696):1160-70.
+
+[2] Pickering A, Harnan S, Fitzgerald P, et al Clinical decision rules for children with minor head injury: a systematic reviewArchives of Disease in Childhood 2011;96:414-421.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3528499de896cb087d08d576e673a290">
+		["MD5-CAM-1.0.1"] = <"ba1f859e711224a47c5d269da2e7a905">
 		["build_uid"] = <"4615b0de-a125-35b7-ac90-859f4cb03f88">
 	>
 
@@ -170,7 +180,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"PECARN Pediatric Head Injury Trauma Algorithm">
-					description = <"PECARN Pediatric Head Injury Trauma Algorithm">
+					description = <"A tool used for identifying children who present with a very low risk of clinically-important traumatic brain injuries (ciTBI). CT imaging may not be required in this group of children.">
 				>
 				["at0001"] = <
 					text = <"History">
