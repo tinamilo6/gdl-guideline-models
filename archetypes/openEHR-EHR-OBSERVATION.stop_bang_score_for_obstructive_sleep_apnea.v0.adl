@@ -17,15 +17,33 @@ language
 description
 	original_author = <
 		["date"] = <"2022-02-25">
+		["name"] = <"Rony Ventura - Silvia Dubon">
+		["organisation"] = <"Karolinska Institute">
+		["email"] = <"rony_d_v@hotmail.com">
 	>
 	lifecycle_state = <"unmanaged">
+	other_contributors = <"Silvia Dubon", ...>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"The STOP-Bang questionnaire is a scoring model consisting of eight easily administered questions starting with the acronym STOP-Bang and is scored based on Yes/No answers each yes sums up 1 point. A score of ≥3 has shown a high sensitivity for detecting OSA: 93% and 100% for moderate and severe OSA, respectively.">
+			keywords = <"mass screening, obstructive/ep (epidemiology), polysomnography, prospective studies, questionnaires, sleep apnoea, snoring/di (diagnosis), snoring/ep (epidemiology)", ...>
+			use = <"-Patients undergoing preoperative evaluation.
+-Patients presenting to a clinic setting with symptoms associated with OSA like: daytime drowsiness, snoring, observed periods of nighttime apnea, noisy breathing, etc.">
+			misuse = <"- Not well validated in the obstetrical population, a subgroup with increased risk of OSA.
+- If a patient has already been diagnosed with OSA or uses CPAP at night.
+- Not for central sleep apnea.">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
+			purpose = <"El cuestionario STOP-Bang es un modelo de calificación que consta de ocho preguntas fáciles de administrar que comienzan con el acrónimo STOP-Bang y se puntúa en base a respuestas Sí/No, cada sí suma 1 punto. Una puntuación de ≥3 ha mostrado una alta sensibilidad para detectar AOS: 93 % y 100 % para AOS moderado y grave, respectivamente.">
+			keywords = <"triaje masivo, obstructiva/ep (epidemiología), polisomnografía, estudios prospectivos, cuestionarios, apnea del sueño, ronquidos/di (diagnóstico), ronquidos/ep (epidemiología)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"-Pacientes sometidos a evaluación preoperatoria
+-Pacientes que acuden a un entorno clínico con síntomas asociados con AOS como: somnolencia diurna, ronquidos, periodos observados de apnea nocturna, respiración ruidosa, etc.">
+			misuse = <"- Uso no validado en población obstétrica, un subgrupo con alto riesgo de AOS.
+- Si el paciente ya fue diagnosticado con AOS o usa un CPAP por las noches.
+- No apto para apnea central del sueño">
 		>
 	>
 	other_details = <
@@ -34,8 +52,11 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"08d9304d43c0e9fa026c20f1f2232ca4">
+		["MD5-CAM-1.0.1"] = <"db68b8b968b549094f3ef70618f203a8">
 		["build_uid"] = <"37511684-abee-3019-af5c-6221ab8d962d">
+		["references"] = <"1. Chung, F., Subramanyam, R., Liao, P., Sasaki, E., Shapiro, C., & Sun, Y. (2012). High STOP-Bang score indicates a high probability of obstructive sleep apnoea. British journal of anaesthesia, 108(5), 768–775. https://doi.org/10.1093/bja/aes022
+2.Nagappa, M., Liao, P., Wong, J., Auckley, D., Ramachandran, S. K., Memtsoudis, S., Mokhlesi, B., & Chung, F. (2015). Validation of the STOP-Bang Questionnaire as a Screening Tool for Obstructive Sleep Apnea among Different Populations: A Systematic Review and Meta-Analysis. PloS one, 10(12), e0143697. https://doi.org/10.1371/journal.pone.0143697
+3.Doshi, V., Walia, R., Jones, K., Aston, C. E., & Awab, A. (2015). STOP-BANG questionnaire as a screening tool for diagnosis of obstructive sleep apnea by unattended portable monitoring sleep study. SpringerPlus, 4, 795. https://doi.org/10.1186/s40064-015-1588-0">
 	>
 
 definition
@@ -122,7 +143,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"stop bang score for Obstructive Sleep Apnea">
-					description = <"stop bang score for Obstructive Sleep Apnea">
+					description = <"detect Obstructive Sleep Apnea (OSA) with the calculation of a patient's STOP-BANG score and it's risk interpretation.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -146,15 +167,15 @@ ontology
 				>
 				["at0010"] = <
 					text = <"Snore loudly">
-					description = <"">
+					description = <"Loud snoring">
 				>
 				["at0011"] = <
 					text = <"Tiredness">
-					description = <"">
+					description = <"Patient report tiredness or fatigued">
 				>
 				["at0012"] = <
 					text = <"Observed apnea">
-					description = <"">
+					description = <"Observed apnea">
 				>
 				["at0017"] = <
 					text = <"No">
@@ -190,7 +211,7 @@ ontology
 				>
 				["at0039"] = <
 					text = <"Body mass index">
-					description = <"">
+					description = <"Body mass index value">
 				>
 				["at0040"] = <
 					text = <"<=35 kg/m^2">
@@ -202,7 +223,7 @@ ontology
 				>
 				["at0042"] = <
 					text = <"Neck circunference">
-					description = <"">
+					description = <"Neck circunference size ">
 				>
 				["at0043"] = <
 					text = <"≤40 cm">
@@ -214,7 +235,7 @@ ontology
 				>
 				["at0046"] = <
 					text = <"Age">
-					description = <"">
+					description = <"Age">
 				>
 				["at0047"] = <
 					text = <"<=50">
@@ -226,7 +247,7 @@ ontology
 				>
 				["at0049"] = <
 					text = <"Gender">
-					description = <"">
+					description = <"Gender">
 				>
 				["at0050"] = <
 					text = <"Female">
@@ -242,7 +263,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Puntaje STOP-BANG para apnea obstructiva del sueño">
-					description = <"*stop bang score for Obstructive Sleep Apnea (en)">
+					description = <"Detección de la apnea obstructiva del sueño (AOS) con el cálculo de la puntuación STOP-BANG de un paciente y su interpretación del riesgo. ">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -270,11 +291,11 @@ ontology
 				>
 				["at0011"] = <
 					text = <"Cansancio">
-					description = <"">
+					description = <"Paciente reporta cansancio o fatiga">
 				>
 				["at0012"] = <
 					text = <"Apnea observada">
-					description = <"">
+					description = <"Apnea observada">
 				>
 				["at0017"] = <
 					text = <"No">
@@ -294,7 +315,7 @@ ontology
 				>
 				["at0022"] = <
 					text = <"Puntaje total">
-					description = <"">
+					description = <"Puntaje total">
 				>
 				["at0026"] = <
 					text = <"No">
@@ -310,7 +331,7 @@ ontology
 				>
 				["at0039"] = <
 					text = <"Índice de masa corporal">
-					description = <"">
+					description = <"Valor de indice de masa corporal">
 				>
 				["at0040"] = <
 					text = <"<=35 kg/m^2">
@@ -322,7 +343,7 @@ ontology
 				>
 				["at0042"] = <
 					text = <"Circunferencia del cuello">
-					description = <"">
+					description = <"Circungerencia del cuello">
 				>
 				["at0043"] = <
 					text = <"≤40 cm">
@@ -334,7 +355,7 @@ ontology
 				>
 				["at0046"] = <
 					text = <"Edad">
-					description = <"">
+					description = <"Edad">
 				>
 				["at0047"] = <
 					text = <"<=50">
@@ -346,7 +367,7 @@ ontology
 				>
 				["at0049"] = <
 					text = <"Genero">
-					description = <"">
+					description = <"Genero">
 				>
 				["at0050"] = <
 					text = <"Femenino">

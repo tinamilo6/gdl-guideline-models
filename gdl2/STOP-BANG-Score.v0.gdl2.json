@@ -193,20 +193,20 @@
         "id": "gt0060",
         "priority": 9,
         "when": [
-          "$gt0058|Gender|==local::at0006|Female|"
+          "$gt0058|Gender|.code=='at0006'"
         ],
         "then": [
-          "$gt0055|Gender|=0|local::at0050|Femenino|"
+          "$gt0055|Gender|=0|local::at0050|Female|"
         ]
       },
       "gt0061": {
         "id": "gt0061",
         "priority": 8,
         "when": [
-          "$gt0058|Gender|==local::at0005|Male|"
+          "$gt0058|Gender|.code=='at0005'"
         ],
         "then": [
-          "$gt0055|Gender|=1|local::at0051|Masculino|"
+          "$gt0055|Gender|=1|local::at0051|Male|"
         ]
       },
       "gt0062": {
@@ -271,7 +271,7 @@
           "$gt0014|Total Score|<=2"
         ],
         "then": [
-          "$gt0052|Risk assessment|=local::at0031|Bajo riesgo|"
+          "$gt0052|Risk assessment|=local::at0031|Low Risk|"
         ]
       },
       "gt0054": {
@@ -281,7 +281,7 @@
           "$gt0014|Total Score|>2"
         ],
         "then": [
-          "$gt0052|Risk assessment|=local::at0032|Alto riesgo|"
+          "$gt0052|Risk assessment|=local::at0032|High Risk|"
         ]
       }
     }
