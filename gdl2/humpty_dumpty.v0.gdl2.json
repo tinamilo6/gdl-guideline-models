@@ -112,12 +112,27 @@
             "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0032]"
           }
         }
+      },
+      "gt0033": {
+        "id": "gt0033",
+        "model_id": "openEHR-EHR-EVALUATION.recommendation.v2",
+        "template_id": "openEHR-EHR-EVALUATION.recommendation.v2",
+        "type": "OUTPUT",
+        "elements": {
+          "gt0034": {
+            "id": "gt0034",
+            "path": "/data[at0001]/items[at0002]"
+          }
+        }
       }
     },
+    "pre_conditions": [
+      "$gt0004|Age|<=18,a"
+    ],
     "rules": {
       "gt0014": {
         "id": "gt0014",
-        "priority": 9,
+        "priority": 11,
         "when": [
           "$gt0004|Age|!=null",
           "$gt0004|Age|<3,a"
@@ -128,7 +143,7 @@
       },
       "gt0017": {
         "id": "gt0017",
-        "priority": 8,
+        "priority": 10,
         "when": [
           "$gt0004|Age|!=null",
           "$gt0004|Age|>=3,a",
@@ -140,7 +155,7 @@
       },
       "gt0018": {
         "id": "gt0018",
-        "priority": 7,
+        "priority": 9,
         "when": [
           "$gt0004|Age|!=null",
           "$gt0004|Age|>=7,a",
@@ -152,7 +167,7 @@
       },
       "gt0019": {
         "id": "gt0019",
-        "priority": 6,
+        "priority": 8,
         "when": [
           "$gt0004|Age|!=null",
           "$gt0004|Age|>=13,a"
@@ -163,7 +178,7 @@
       },
       "gt0021": {
         "id": "gt0021",
-        "priority": 5,
+        "priority": 7,
         "when": [
           "$gt0003|Gender|!=null",
           "$gt0003|Gender|==local::at0006|Female|"
@@ -174,7 +189,7 @@
       },
       "gt0023": {
         "id": "gt0023",
-        "priority": 4,
+        "priority": 6,
         "when": [
           "$gt0003|Gender|!=null",
           "$gt0003|Gender|==local::at0005|Male|"
@@ -185,7 +200,7 @@
       },
       "gt0020": {
         "id": "gt0020",
-        "priority": 3,
+        "priority": 5,
         "when": [
           "$gt0016|Age Classification|!=null",
           "$gt0022|Gender|!=null",
@@ -201,7 +216,7 @@
       },
       "gt0030": {
         "id": "gt0030",
-        "priority": 2,
+        "priority": 4,
         "when": [
           "$gt0024|Total score|!=null",
           "$gt0024|Total score|>=7",
@@ -214,7 +229,7 @@
       },
       "gt0031": {
         "id": "gt0031",
-        "priority": 1,
+        "priority": 3,
         "when": [
           "$gt0024|Total score|!=null",
           "$gt0024|Total score|>=12"
@@ -222,6 +237,28 @@
         "then": [
           "$gt0012|Fall Risk|=local::at0007|High risk for fall|",
           "$gt0013|Recommendation|=local::at0010|High Risk Standard Protocol|"
+        ]
+      },
+      "gt0032": {
+        "id": "gt0032",
+        "priority": 2,
+        "when": [
+          "$gt0013|Recommendation|!=null",
+          "$gt0013|Recommendation|==local::at0009|Low Risk Standard Protocol|"
+        ],
+        "then": [
+          "$gt0034|Recommendation|='Implement the following patient falls safety protocol: Orientation to room; Bed in low position, brakes on; Side rails × 2 or 4 up, assess large gaps, such that a patient could get extremity or other body part entrapped, use additional safety procedures; Use of non-skid footwear for ambulating patients, use of appropriate-size clothing to prevent risk of tripping; Assess eliminations need, assist as needed; Call light is within reach, educate patient/family on its functionality; Environment clear of unused equipment, furniture’s in place, clear of hazards; Assess for adequate lighting, leave nightlight on; Patient and family education available to parents and patient; Document fall prevention teaching and include in plan of care.'"
+        ]
+      },
+      "gt0035": {
+        "id": "gt0035",
+        "priority": 1,
+        "when": [
+          "$gt0013|Recommendation|!=null",
+          "$gt0013|Recommendation|==local::at0010|High Risk Standard Protocol|"
+        ],
+        "then": [
+          "$gt0034|Recommendation|='Implement the following patient falls safety protocol: Identify patient with an ID band on the patient and Humpty Dumpty signage on the bed and in patient chart; Educate patient/parents of falls protocol precautions; Check patient at minimum every 1 hour; Accompany patient with ambulation; Developmentally place patient in appropriate bed; Consider moving patient closer to nurses’ station; Assess need for 1:1 supervision; Evaluate medication administration times; Remove all unused equipment out of room; Protective barriers to close off spaces, gaps in bed; Keep door open at all times unless specified isolation precautions are in use; Keep bed in the lowest position, unless patient is directly attended; Document in nursing narrative teaching and plan of care.'"
         ]
       }
     }
@@ -331,6 +368,19 @@
           "gt0031": {
             "id": "gt0031",
             "text": "High Risks for Falls"
+          },
+          "gt0032": {
+            "id": "gt0032",
+            "text": "Duplicate Recommendation"
+          },
+          "gt0034": {
+            "id": "gt0034",
+            "text": "Recommendation",
+            "description": "Recommendation"
+          },
+          "gt0035": {
+            "id": "gt0035",
+            "text": "Duplicate Recommendation High Risk"
           }
         }
       }
