@@ -247,7 +247,7 @@
           "$gt0013|Recommendation|==local::at0009|Low Risk Standard Protocol|"
         ],
         "then": [
-          "$gt0034|Recommendation|='Implement the following patient falls safety protocol: Orientation to room; Bed in low position, brakes on; Side rails × 2 or 4 up, assess large gaps, such that a patient could get extremity or other body part entrapped, use additional safety procedures; Use of non-skid footwear for ambulating patients, use of appropriate-size clothing to prevent risk of tripping; Assess eliminations need, assist as needed; Call light is within reach, educate patient/family on its functionality; Environment clear of unused equipment, furniture’s in place, clear of hazards; Assess for adequate lighting, leave nightlight on; Patient and family education available to parents and patient; Document fall prevention teaching and include in plan of care.'"
+          "$gt0034|Recommendation|='Implement the following patient falls safety protocol. Orientation to room; Bed in low position, brakes on; Side rails × 2 or 4 up, assess large gaps, such that a patient could get extremity or other body part entrapped, use additional safety procedures; Use of non-skid footwear for ambulating patients, use of appropriate-size clothing to prevent risk of tripping; Assess eliminations need, assist as needed; Call light is within reach, educate patient/family on its functionality; Environment clear of unused equipment, furniture’s in place, clear of hazards; Assess for adequate lighting, leave nightlight on; Patient and family education available to parents and patient; Document fall prevention teaching and include in plan of care.'"
         ]
       },
       "gt0035": {
@@ -258,7 +258,7 @@
           "$gt0013|Recommendation|==local::at0010|High Risk Standard Protocol|"
         ],
         "then": [
-          "$gt0034|Recommendation|='Implement the following patient falls safety protocol: Identify patient with an ID band on the patient and Humpty Dumpty signage on the bed and in patient chart; Educate patient/parents of falls protocol precautions; Check patient at minimum every 1 hour; Accompany patient with ambulation; Developmentally place patient in appropriate bed; Consider moving patient closer to nurses’ station; Assess need for 1:1 supervision; Evaluate medication administration times; Remove all unused equipment out of room; Protective barriers to close off spaces, gaps in bed; Keep door open at all times unless specified isolation precautions are in use; Keep bed in the lowest position, unless patient is directly attended; Document in nursing narrative teaching and plan of care.'"
+          "$gt0034|Recommendation|='Implement the following patient falls safety protocol. Identify patient with an ID band on the patient and Humpty Dumpty signage on the bed and in patient chart; Educate patient/parents of falls protocol precautions; Check patient at minimum every 1 hour; Accompany patient with ambulation; Developmentally place patient in appropriate bed; Consider moving patient closer to nurses’ station; Assess need for 1:1 supervision; Evaluate medication administration times; Remove all unused equipment out of room; Protective barriers to close off spaces, gaps in bed; Keep door open at all times unless specified isolation precautions are in use; Keep bed in the lowest position, unless patient is directly attended; Document in nursing narrative teaching and plan of care.'"
         ]
       }
     }
