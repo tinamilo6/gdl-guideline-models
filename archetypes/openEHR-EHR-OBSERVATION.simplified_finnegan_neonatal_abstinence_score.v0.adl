@@ -7,8 +7,8 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			author = <
 			>
 		>
@@ -35,8 +35,8 @@ The sFNAS is meant to be used for both current status and change in status over 
 
 Not to be confused with other neonatal abstinence or withdrawal assessments or other versions of the Finnegan Neonatal Abstinence Score such as the Modified Finnegan Neonatal Abstinence Score. Use instead the specific archetype, openEHR-EHR-OBSERVATION.modified_finnegan_neonatal_abstinence_score_nas.v0. ">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -285,7 +285,7 @@ ontology
 				>
 			>
 		>
-		["es"] = <
+		["es-ar"] = <
 			items = <
 				["at0000"] = <
 					text = <"Evaluación simplificada del puntaje de Finnegan de Abstinencia Neonatal">

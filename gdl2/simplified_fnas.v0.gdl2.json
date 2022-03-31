@@ -29,8 +29,8 @@
         "misuse": "Not to be used in neonatal patients without maternal drug abuse.",
         "copyright": "@Cambio CDS"
       },
-      "es": {
-        "id": "es",
+      "es-ar": {
+        "id": "es-ar",
         "purpose": "Usar para calcular el puntaje para la Evaluación simplificada del puntaje de Finnegan de Abstinencia Neonatal  (sFNAS por sus siglas en inglés). La sFNAS es una versión de 10 ítems de la herramienta Finnegan original de 21 ítems. Los parámetros evalúan signos del sistema nervioso central, autonómico y gastrointestinal presentes en el síndrome de abstinencia neonatal. \n\nEl puntaje de la sFNAS está diseñado para ser comparado a través del tiempo a través de monitoreo continui de los signos cada 3 a 4 horas. La recomendación para empezar tratamiento farmacológico es sugerida cuando lo siguiente es registrado:\n- Tres puntajes consecutivos iguales o mayores a 6,\n- Dos puntajes consecutivos iguales o mayoresa 10.",
         "keywords": [
           "neonatal",
@@ -234,8 +234,8 @@
           }
         }
       },
-      "es": {
-        "id": "es",
+      "es-ar": {
+        "id": "es-ar",
         "terms": {
           "gt0001": {
             "id": "gt0001",
