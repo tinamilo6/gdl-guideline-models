@@ -1,5 +1,5 @@
 guidelines:
-  1: new_guideline.v0
+  1: S-FMDRS_guideline.v0
 test_cases:
 - id: case_1
   input:
