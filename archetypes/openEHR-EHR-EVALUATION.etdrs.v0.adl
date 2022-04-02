@@ -10,6 +10,7 @@ language
 description
 	original_author = <
 		["date"] = <"2022-03-28">
+		["name"] = <"Eric Vincent Rivas">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -23,6 +24,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"79235d2b18f847bf5d10a501a35c0900">
 		["build_uid"] = <"e3a8af9d-ac7d-36fb-a9f9-1fa24d9fe7ea">
 	>
 

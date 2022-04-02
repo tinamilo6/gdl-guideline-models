@@ -1,5 +1,5 @@
 guidelines:
-  1: new_guideline.v0
+  1: ETDRS_Diabetic_Retinopathy_SeverityRating_MacEdema.v0
 test_cases:
 - id: 1. Score 0 - No Diabetic Retinopathy
   input:
