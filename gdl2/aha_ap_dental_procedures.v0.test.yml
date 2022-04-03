@@ -65,9 +65,9 @@ test_cases:
   expected_output:
     1:
       gt0109|Medication item 3: Doxycycline
-      gt0111|Dose 2: 500,mg
-      gt0110|Dose 1: 2,g
-      gt0112|Dose 3: 100,mg
+      gt0111|Dose 2: 500.0,mg
+      gt0110|Dose 1: 2.0,g
+      gt0112|Dose 3: 100.0,mg
       gt0108|Medication item 2: Azithromycin or Clarithromycin
       gt0113|Route: local::at0159|Oral|
       gt0107|Medication item 1: Cephalexin
@@ -91,9 +91,9 @@ test_cases:
   expected_output:
     1:
       gt0109|Medication item 3: Doxycycline
-      gt0111|Dose 2: 500,mg
-      gt0110|Dose 1: 2,g
-      gt0112|Dose 3: 100,mg
+      gt0111|Dose 2: 500.0,mg
+      gt0110|Dose 1: 2.0,g
+      gt0112|Dose 3: 100.0,mg
       gt0108|Medication item 2: Azithromycin or Clarithromycin
       gt0113|Route: local::at0159|Oral|
       gt0107|Medication item 1: Cephalexin
@@ -142,7 +142,7 @@ test_cases:
       gt0102|Age: 45,a
   expected_output:
     1:
-      gt0110|Dose 1: 2,g
+      gt0110|Dose 1: 2.0,g
       gt0113|Route: local::at0159|Oral|
       gt0107|Medication item 1: Amoxicillin
       gt0150|Topic: The following antibiotic prophylaxis regimen is recommended as a single dose 30 to 60 minutes prior to the dental procedure.
@@ -162,7 +162,7 @@ test_cases:
       gt0102|Age: 17,a
   expected_output:
     1:
-      gt0110|Dose 1: 2,g
+      gt0110|Dose 1: 2.0,g
       gt0113|Route: local::at0159|Oral|
       gt0107|Medication item 1: Amoxicillin
       gt0150|Topic: The following antibiotic prophylaxis regimen is recommended as a single dose 30 to 60 minutes prior to the dental procedure.
@@ -202,7 +202,7 @@ test_cases:
       gt0102|Age: 35,a
   expected_output:
     1:
-      gt0110|Dose 1: 1,g
+      gt0110|Dose 1: 1.0,g
       gt0113|Route: local::at0160|Intramuscular (IM) or Intravenous (IV)|
       gt0107|Medication item 1: Cefazolin or Ceftriaxone
       gt0150|Topic: The following antibiotic prophylaxis regimen is recommended as a single dose 30 to 60 minutes prior to the dental procedure.
@@ -222,7 +222,7 @@ test_cases:
       gt0102|Age: 8,a
   expected_output:
     1:
-      gt0110|Dose 1: 1,g
+      gt0110|Dose 1: 1.0,g
       gt0113|Route: local::at0160|Intramuscular (IM) or Intravenous (IV)|
       gt0107|Medication item 1: Cefazolin or Ceftriaxone
       gt0150|Topic: The following antibiotic prophylaxis regimen is recommended as a single dose 30 to 60 minutes prior to the dental procedure.
@@ -262,8 +262,8 @@ test_cases:
       gt0102|Age: 26,a
   expected_output:
     1:
-      gt0111|Dose 2: 2,g
-      gt0110|Dose 1: 1,g
+      gt0111|Dose 2: 2.0,g
+      gt0110|Dose 1: 1.0,g
       gt0108|Medication item 2: Ampicillin
       gt0113|Route: local::at0160|Intramuscular (IM) or Intravenous (IV)|
       gt0107|Medication item 1: Cefazolin or Ceftriaxone
@@ -285,8 +285,8 @@ test_cases:
       gt0102|Age: 17,a
   expected_output:
     1:
-      gt0111|Dose 2: 2,g
-      gt0110|Dose 1: 1,g
+      gt0111|Dose 2: 2.0,g
+      gt0110|Dose 1: 1.0,g
       gt0108|Medication item 2: Ampicillin
       gt0113|Route: local::at0160|Intramuscular (IM) or Intravenous (IV)|
       gt0107|Medication item 1: Cefazolin or Ceftriaxone
@@ -309,7 +309,7 @@ test_cases:
   expected_output:
     1:
       gt0111|Dose 2: 1500.0,mg
-      gt0110|Dose 1: 1,g
+      gt0110|Dose 1: 1.0,g
       gt0108|Medication item 2: Ampicillin
       gt0113|Route: local::at0160|Intramuscular (IM) or Intravenous (IV)|
       gt0107|Medication item 1: Cefazolin or Ceftriaxone

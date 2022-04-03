@@ -18,7 +18,7 @@
     "details": {
       "en": {
         "id": "en",
-        "purpose": "To suggest the antibiotic prophylaxis regimen based on the AHA guideline for a patient undergoing invasive dental procedures.",
+        "purpose": "To suggest the antibiotic prophylaxis regimen based on the AHA algorithm for a patient undergoing certain dental procedures.",
         "keywords": [
           "antibiotic prophylaxis",
           "infective endocarditis",
@@ -31,7 +31,7 @@
       },
       "es": {
         "id": "es",
-        "purpose": "Para sugerir régimenes de antibiótico profilaxis basados en la guía clinica de la AHA para un paciente al que se le realizarán procedimientos dentales invasivos.",
+        "purpose": "Para sugerir régimenes de antibiótico profilaxis basados en el algoritmo de la AHA para un paciente al que se le realizarán ciertos procedimientos dentales.",
         "keywords": [
           "antibiotico profilaxis",
           "endocarditis infecciosa",
@@ -251,7 +251,8 @@
         "then": [
           "$gt0107|Medication item 1|='Cephalexin'",
           "$gt0110|Dose 1|.magnitude=2",
-          "$gt0110|Dose 1|.unit='g'"
+          "$gt0110|Dose 1|.unit='g'",
+          "$gt0110|Dose 1|.precision=1"
         ]
       },
       "gt0127": {
@@ -265,7 +266,8 @@
         "then": [
           "$gt0107|Medication item 1|='Cephalexin'",
           "$gt0110|Dose 1|.magnitude=50*$gt0064.magnitude",
-          "$gt0110|Dose 1|.unit='mg'"
+          "$gt0110|Dose 1|.unit='mg'",
+          "$gt0110|Dose 1|.precision=1"
         ]
       },
       "gt0128": {
@@ -278,7 +280,8 @@
         "then": [
           "$gt0108|Medication item 2|='Azithromycin or Clarithromycin'",
           "$gt0111|Dose 2|.magnitude=500",
-          "$gt0111|Dose 2|.unit='mg'"
+          "$gt0111|Dose 2|.unit='mg'",
+          "$gt0111|Dose 2|.precision=1"
         ]
       },
       "gt0129": {
@@ -292,7 +295,8 @@
         "then": [
           "$gt0108|Medication item 2|='Azithromycin or Clarithromycin'",
           "$gt0111|Dose 2|.magnitude=15*$gt0064.magnitude",
-          "$gt0111|Dose 2|.unit='mg'"
+          "$gt0111|Dose 2|.unit='mg'",
+          "$gt0111|Dose 2|.precision=1"
         ]
       },
       "gt0130": {
@@ -305,7 +309,8 @@
         "then": [
           "$gt0109|Medication item 3|='Doxycycline'",
           "$gt0112|Dose 3|.magnitude=100",
-          "$gt0112|Dose 3|.unit='mg'"
+          "$gt0112|Dose 3|.unit='mg'",
+          "$gt0112|Dose 3|.precision=1"
         ]
       },
       "gt0131": {
@@ -319,7 +324,8 @@
         "then": [
           "$gt0109|Medication item 3|='Doxycycline'",
           "$gt0112|Dose 3|.magnitude=2.2*$gt0064.magnitude",
-          "$gt0112|Dose 3|.unit='mg'"
+          "$gt0112|Dose 3|.unit='mg'",
+          "$gt0112|Dose 3|.precision=1"
         ]
       },
       "gt0133": {
@@ -332,7 +338,8 @@
         "then": [
           "$gt0107|Medication item 1|='Amoxicillin'",
           "$gt0110|Dose 1|.magnitude=2",
-          "$gt0110|Dose 1|.unit='g'"
+          "$gt0110|Dose 1|.unit='g'",
+          "$gt0110|Dose 1|.precision=1"
         ]
       },
       "gt0134": {
@@ -346,7 +353,8 @@
         "then": [
           "$gt0107|Medication item 1|='Amoxicillin'",
           "$gt0110|Dose 1|.magnitude=50*$gt0064.magnitude",
-          "$gt0110|Dose 1|.unit='mg'"
+          "$gt0110|Dose 1|.unit='mg'",
+          "$gt0110|Dose 1|.precision=1"
         ]
       },
       "gt0139": {
@@ -359,7 +367,8 @@
         "then": [
           "$gt0107|Medication item 1|='Cefazolin or Ceftriaxone'",
           "$gt0110|Dose 1|.magnitude=1",
-          "$gt0110|Dose 1|.unit='g'"
+          "$gt0110|Dose 1|.unit='g'",
+          "$gt0110|Dose 1|.precision=1"
         ]
       },
       "gt0140": {
@@ -373,7 +382,8 @@
         "then": [
           "$gt0107|Medication item 1|='Cefazolin or Ceftriaxone'",
           "$gt0110|Dose 1|.magnitude=50*$gt0064.magnitude",
-          "$gt0110|Dose 1|.unit='mg'"
+          "$gt0110|Dose 1|.unit='mg'",
+          "$gt0110|Dose 1|.precision=1"
         ]
       },
       "gt0146": {
@@ -386,7 +396,8 @@
         "then": [
           "$gt0108|Medication item 2|='Ampicillin'",
           "$gt0111|Dose 2|.magnitude=2",
-          "$gt0111|Dose 2|.unit='g'"
+          "$gt0111|Dose 2|.unit='g'",
+          "$gt0111|Dose 2|.precision=1"
         ]
       },
       "gt0147": {
@@ -400,7 +411,8 @@
         "then": [
           "$gt0108|Medication item 2|='Ampicillin'",
           "$gt0111|Dose 2|.magnitude=50*$gt0064.magnitude",
-          "$gt0111|Dose 2|.unit='mg'"
+          "$gt0111|Dose 2|.unit='mg'",
+          "$gt0111|Dose 2|.precision=1"
         ]
       },
       "gt0141": {
@@ -437,7 +449,7 @@
         "then": [
           "$gt0150|Topic|.value='Any of the following antibiotic prophylaxis regimens is recommended as a single dose 30 to 60 minutes prior to the dental procedure.'",
           "$gt0149|Recommendation 1|.value=$gt0108+' '+$gt0113.value+' '+$gt0111.magnitude+$gt0111.unit+'.'",
-          "$gt0151|Recommendation 2|.value=$gt0107+' '+$gt0113.value+' '+$gt0110.magnitude+$gt0110.unit+' (Cephalosporins should not be used in an individual with a history of anaphylaxis, angioedema, or urticaria with penicillin or ampicillin).'"
+          "$gt0151|Recommendation 2|.value=$gt0107+' '+$gt0113.value+' '+$gt0110.magnitude+$gt0110.unit+' (Cephalosporins should not be used in an individual with a history of anaphylaxis, angioedema, or urticarial with penicillin or ampicillin).'"
         ]
       },
       "gt0132": {
@@ -484,7 +496,7 @@
           "gt0049": {
             "id": "gt0049",
             "text": "Congenital Heart Disease",
-            "description": "Any or a combination of the following: unrepaired cyanotic congenital CHD, including palliative shunts and conduits; completely repaired congenital heart defect with prosthetic material or device, whether placed by surgery or by transcatheter during the first 6 months after the procedure; repaired CHD with residual defects at the site of or adjacent to the site of a prosthetic patch or prosthetic device; surgical or transcatheter pulmonary artery valve or conduit placement such as Melody valve and Contegra conduit."
+            "description": "Any or a combination of the following: unrepaired cyanotic congenital CHD, including palliative shunts and conduits; completely repaired congenital heart defect with prosthetic material or device, whether placed by surgery or by transcatheter during the first 6 mo after the procedure; repaired CHD with residual defects at the site of or adjacent to the site of a prosthetic patch or prosthetic device; surgical or transcatheter pulmonary artery valve or conduit placement such as Melody valve and Contegra conduit."
           },
           "gt0050": {
             "id": "gt0050",
