@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=fb9615c9-e817-4c2f-859a-0156bf51def5)
-	openEHR-EHR-EVALUATION.tissue_plasminogen_activator_tpa.v0
+	openEHR-EHR-EVALUATION.tissue_plasminogen_activator_tpa_administration.v0
 
 concept
 	[at0000]
@@ -26,15 +26,43 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a90567baff063be8e2a9e8f660a9dfad">
+		["MD5-CAM-1.0.1"] = <"84dffb6a22fa6c676d7486fe0acccd87">
 		["build_uid"] = <"c8f02011-f2be-3db9-8dcc-6c32d23f67a2">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- Tissue Plasminogen Activator tPA
+	EVALUATION[at0000] matches {    -- Tissue Plasminogen Activator tPA administration
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0075] occurrences matches {0..1} matches {    -- Eligibility for tPA
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0076] occurrences matches {0..1} matches {    -- Clinical diagnosis of ischemic stroke causing neurological deficit
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0078,    -- YES
+											at0079;    -- NO
+											at0079]
+										}
+									}
+								}
+							}
+							ELEMENT[at0077] occurrences matches {0..1} matches {    -- Time of symptom onset <4.5 hours
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0080,    -- YES
+											at0081;    -- NO
+											at0081]
+										}
+									}
+								}
+							}
+						}
+					}
 					CLUSTER[at0002] matches {    -- Absolute Contraindications to tPA
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Intracranial hemorrhage on CT
@@ -43,7 +71,8 @@ definition
 										defining_code matches {
 											[local::
 											at0014,    -- YES
-											at0015]    -- NO
+											at0015;    -- NO
+											at0015]
 										}
 									}
 								}
@@ -54,7 +83,8 @@ definition
 										defining_code matches {
 											[local::
 											at0016,    -- YES
-											at0017]    -- NO
+											at0017;    -- NO
+											at0017]
 										}
 									}
 								}
@@ -65,7 +95,8 @@ definition
 										defining_code matches {
 											[local::
 											at0018,    -- YES
-											at0019]    -- NO
+											at0019;    -- NO
+											at0019]
 										}
 									}
 								}
@@ -76,7 +107,8 @@ definition
 										defining_code matches {
 											[local::
 											at0020,    -- YES
-											at0021]    -- NO
+											at0021;    -- NO
+											at0021]
 										}
 									}
 								}
@@ -87,7 +119,8 @@ definition
 										defining_code matches {
 											[local::
 											at0022,    -- YES
-											at0023]    -- NO
+											at0023;    -- NO
+											at0023]
 										}
 									}
 								}
@@ -98,7 +131,8 @@ definition
 										defining_code matches {
 											[local::
 											at0024,    -- YES
-											at0025]    -- NO
+											at0025;    -- NO
+											at0025]
 										}
 									}
 								}
@@ -109,7 +143,8 @@ definition
 										defining_code matches {
 											[local::
 											at0026,    -- YES
-											at0027]    -- NO
+											at0027;    -- NO
+											at0027]
 										}
 									}
 								}
@@ -120,7 +155,8 @@ definition
 										defining_code matches {
 											[local::
 											at0028,    -- YES
-											at0029]    -- NO
+											at0029;    -- NO
+											at0029]
 										}
 									}
 								}
@@ -131,7 +167,8 @@ definition
 										defining_code matches {
 											[local::
 											at0030,    -- YES
-											at0031]    -- NO
+											at0031;    -- NO
+											at0031]
 										}
 									}
 								}
@@ -142,7 +179,8 @@ definition
 										defining_code matches {
 											[local::
 											at0034,    -- YES
-											at0035]    -- NO
+											at0035;    -- NO
+											at0035]
 										}
 									}
 								}
@@ -157,7 +195,8 @@ definition
 										defining_code matches {
 											[local::
 											at0072,    -- YES
-											at0073]    -- NO
+											at0073;    -- NO
+											at0073]
 										}
 									}
 								}
@@ -168,7 +207,8 @@ definition
 										defining_code matches {
 											[local::
 											at0070,    -- YES
-											at0071]    -- NO
+											at0071;    -- NO
+											at0071]
 										}
 									}
 								}
@@ -179,7 +219,8 @@ definition
 										defining_code matches {
 											[local::
 											at0068,    -- YES
-											at0069]    -- NO
+											at0069;    -- NO
+											at0069]
 										}
 									}
 								}
@@ -190,7 +231,8 @@ definition
 										defining_code matches {
 											[local::
 											at0066,    -- YES
-											at0067]    -- NO
+											at0067;    -- NO
+											at0067]
 										}
 									}
 								}
@@ -201,7 +243,8 @@ definition
 										defining_code matches {
 											[local::
 											at0064,    -- YES
-											at0065]    -- NO
+											at0065;    -- NO
+											at0065]
 										}
 									}
 								}
@@ -212,7 +255,8 @@ definition
 										defining_code matches {
 											[local::
 											at0062,    -- YES
-											at0063]    -- NO
+											at0063;    -- NO
+											at0063]
 										}
 									}
 								}
@@ -223,7 +267,8 @@ definition
 										defining_code matches {
 											[local::
 											at0060,    -- YES
-											at0061]    -- NO
+											at0061;    -- NO
+											at0061]
 										}
 									}
 								}
@@ -234,7 +279,8 @@ definition
 										defining_code matches {
 											[local::
 											at0058,    -- YES
-											at0059]    -- NO
+											at0059;    -- NO
+											at0059]
 										}
 									}
 								}
@@ -249,7 +295,8 @@ definition
 										defining_code matches {
 											[local::
 											at0054,    -- YES
-											at0055]    -- NO
+											at0055;    -- NO
+											at0055]
 										}
 									}
 								}
@@ -271,7 +318,8 @@ definition
 										defining_code matches {
 											[local::
 											at0052,    -- YES
-											at0053]    -- NO
+											at0053;    -- NO
+											at0053]
 										}
 									}
 								}
@@ -282,7 +330,8 @@ definition
 										defining_code matches {
 											[local::
 											at0050,    -- YES
-											at0051]    -- NO
+											at0051;    -- NO
+											at0051]
 										}
 									}
 								}
@@ -302,7 +351,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Tissue Plasminogen Activator tPA">
+					text = <"Tissue Plasminogen Activator tPA administration">
 					description = <"Tissue Plasminogen Activator tPA">
 				>
 				["at0001"] = <
@@ -586,6 +635,34 @@ ontology
 					description = <"">
 				>
 				["at0073"] = <
+					text = <"NO">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Eligibility for tPA">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Clinical diagnosis of ischemic stroke causing neurological deficit">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Time of symptom onset <4.5 hours">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"YES">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"NO">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"YES">
+					description = <"">
+				>
+				["at0081"] = <
 					text = <"NO">
 					description = <"">
 				>
