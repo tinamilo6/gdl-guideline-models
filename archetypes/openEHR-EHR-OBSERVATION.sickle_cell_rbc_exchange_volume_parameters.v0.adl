@@ -25,7 +25,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"63d9ba46bd0bf1476e665a93952b95bc">
+		["MD5-CAM-1.0.1"] = <"e8d71fea7d205875f458318ddd530979">
 		["build_uid"] = <"0269479e-47b4-3bd1-ad1a-9074c7034d14">
 	>
 
@@ -38,50 +38,100 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] matches {    -- RBC exchange replacement volume (mL)
+									ELEMENT[at0014] matches {    -- Patient hematocrit
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"%">
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0012] matches {    -- Patient's initial HgbS
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"%">
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0013] matches {    -- Goal HgbS
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"%">
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0015] matches {    -- Hematocrit of transfused RBCs
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"%">
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0004] matches {    -- RBC exchange replacement volume
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::129]>
 												list = <
 													["1"] = <
 														units = <"mL">
+														precision = <|0|>
 													>
 												>
 											>
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Approximate number of Blood Units (assuming 350 mL RBCs per unit)
+									ELEMENT[at0008] matches {    -- Approximate number of Blood Units (assuming 350 mL RBCs per unit)
 										value matches {
 											DV_QUANTITY matches {*}
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Total blood volume (mL)
+									ELEMENT[at0009] matches {    -- Total blood volume
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::129]>
 												list = <
 													["1"] = <
 														units = <"mL">
+														precision = <|0|>
 													>
 												>
 											>
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {    -- RBC volume (mL)
+									ELEMENT[at0010] matches {    -- RBC volume
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::129]>
 												list = <
 													["1"] = <
 														units = <"mL">
+														precision = <|0|>
 													>
 												>
 											>
-										}
-									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Error Comment
-										value matches {
-											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -90,6 +140,9 @@ definition
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0016] matches {*}    -- Item tree
 		}
 	}
 
@@ -114,7 +167,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"RBC exchange replacement volume (mL)">
+					text = <"RBC exchange replacement volume">
 					description = <"">
 				>
 				["at0008"] = <
@@ -122,16 +175,32 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"Total blood volume (mL)">
+					text = <"Total blood volume">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"RBC volume (mL)">
+					text = <"RBC volume">
 					description = <"">
 				>
-				["at0011"] = <
-					text = <"Error Comment">
+				["at0012"] = <
+					text = <"Patient's initial HgbS">
 					description = <"">
+				>
+				["at0013"] = <
+					text = <"Goal HgbS">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Patient hematocrit">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Hematocrit of transfused RBCs">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
 				>
 			>
 		>
