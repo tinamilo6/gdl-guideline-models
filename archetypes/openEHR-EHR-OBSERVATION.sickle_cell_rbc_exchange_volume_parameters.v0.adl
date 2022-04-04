@@ -105,7 +105,14 @@ definition
 									}
 									ELEMENT[at0008] matches {    -- Approximate number of Blood Units (assuming 350 mL RBCs per unit)
 										value matches {
-											DV_QUANTITY matches {*}
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
 										}
 									}
 									ELEMENT[at0009] matches {    -- Total blood volume
