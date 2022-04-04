@@ -29,8 +29,8 @@
         "misuse": "Not to be used to assess the AP needs for non-dental procedures.",
         "copyright": "@Cambio CDS"
       },
-      "es": {
-        "id": "es",
+      "es-ar": {
+        "id": "es-ar",
         "purpose": "Para sugerir régimenes de antibiótico profilaxis basados en el algoritmo de la AHA para un paciente al que se le realizarán ciertos procedimientos dentales.",
         "keywords": [
           "antibiotico profilaxis",
@@ -131,6 +131,10 @@
             "id": "gt0109",
             "path": "/description[at0017]/items[at0158]"
           },
+          "gt0113": {
+            "id": "gt0113",
+            "path": "/description[at0017]/items[at0140]/items[at0147]"
+          },
           "gt0110": {
             "id": "gt0110",
             "path": "/description[at0017]/items[openEHR-EHR-CLUSTER.dosage.v2]/items[at0144]"
@@ -142,10 +146,6 @@
           "gt0112": {
             "id": "gt0112",
             "path": "/description[at0017]/items[openEHR-EHR-CLUSTER.dosage.v2]/items[at0182]"
-          },
-          "gt0113": {
-            "id": "gt0113",
-            "path": "/description[at0017]/items[at0140]/items[at0147]"
           }
         }
       },
@@ -673,8 +673,8 @@
           }
         }
       },
-      "es": {
-        "id": "es",
+      "es-ar": {
+        "id": "es-ar",
         "terms": {
           "gt0001": {
             "id": "gt0001",

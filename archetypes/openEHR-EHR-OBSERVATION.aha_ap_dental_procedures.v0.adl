@@ -7,8 +7,8 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			author = <
 				["name"] = <"Rosario Silva Sepulveda">
 				["email"] = <"rosario.silva.s@outlook.com">
@@ -33,8 +33,8 @@ description
 			use = <"Use to record the results for each component parameter for the American Heart Association (AHA) Antibiotic Prophylaxis (AP) Guidelines for dental procedures.">
 			misuse = <"Not to be used to record information about a medication order. Use instead openEHR-EHR-INSTRUCTION.medication_order.v3.">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -318,7 +318,7 @@ ontology
 				>
 			>
 		>
-		["es"] = <
+		["es-ar"] = <
 			items = <
 				["at0000"] = <
 					text = <"Guía clínica de la American Heart Association (AHA) de Antibiotico-Profilaxis (AP) para procedimientos dentales">
