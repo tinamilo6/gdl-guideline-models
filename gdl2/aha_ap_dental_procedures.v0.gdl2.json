@@ -29,8 +29,8 @@
         "misuse": "Not to be used to assess the AP needs for non-dental procedures.",
         "copyright": "@Cambio CDS"
       },
-      "es-ar": {
-        "id": "es-ar",
+      "es": {
+        "id": "es",
         "purpose": "Para sugerir régimenes de antibiótico profilaxis basados en el algoritmo de la AHA para un paciente al que se le realizarán ciertos procedimientos dentales.",
         "keywords": [
           "antibiotico profilaxis",
@@ -131,10 +131,6 @@
             "id": "gt0109",
             "path": "/description[at0017]/items[at0158]"
           },
-          "gt0113": {
-            "id": "gt0113",
-            "path": "/description[at0017]/items[at0140]/items[at0147]"
-          },
           "gt0110": {
             "id": "gt0110",
             "path": "/description[at0017]/items[openEHR-EHR-CLUSTER.dosage.v2]/items[at0144]"
@@ -146,6 +142,10 @@
           "gt0112": {
             "id": "gt0112",
             "path": "/description[at0017]/items[openEHR-EHR-CLUSTER.dosage.v2]/items[at0182]"
+          },
+          "gt0113": {
+            "id": "gt0113",
+            "path": "/description[at0017]/items[at0140]/items[at0147]"
           }
         }
       },
@@ -181,6 +181,9 @@
         "when": [
           "$gt0046|Invasive dental procedure|==local::at0011|Yes|",
           "($gt0047|Prosthetic cardiac valve or material|==local::at0011|Yes|)||(($gt0048|Previous, relapse, or recurrent IE|==local::at0011|Yes|)||(($gt0049|Congenital Heart Disease|==local::at0011|Yes|)||($gt0050|Cardiac transplant recipient who develop cardiac valvulopathy|==local::at0011|Yes|)))"
+        ],
+        "then": [
+          "$gt0150|Topic|.value='Antibiotic prophylaxis is recommended for the patient as a single dose 30 to 60 minutes prior to the dental procedure. Any of the following regimens are recommended.'"
         ]
       },
       "gt0062": {
@@ -190,7 +193,7 @@
           "!fired($gt0070)"
         ],
         "then": [
-          "$gt0150|Topic|='No antibiotic prophylaxis is recommended prior to the procedure.'"
+          "$gt0150|Topic|.value='No antibiotic prophylaxis is recommended prior to the procedure.'"
         ]
       },
       "gt0118": {
@@ -423,7 +426,6 @@
           "fired($gt0095)"
         ],
         "then": [
-          "$gt0150|Topic|.value='The following antibiotic prophylaxis regimen is recommended as a single dose 30 to 60 minutes prior to the dental procedure.'",
           "$gt0149|Recommendation 1|.value=$gt0107+' '+$gt0113.value+' '+$gt0110.magnitude+$gt0110.unit+'.'"
         ]
       },
@@ -435,7 +437,6 @@
           "fired($gt0119)"
         ],
         "then": [
-          "$gt0150|Topic|.value='The following antibiotic prophylaxis regimen is recommended as a single dose 30 to 60 minutes prior to the dental procedure.'",
           "$gt0149|Recommendation 1|.value=$gt0107+' '+$gt0113.value+' '+$gt0110.magnitude+$gt0110.unit+'.'"
         ]
       },
@@ -447,7 +448,6 @@
           "fired($gt0116)"
         ],
         "then": [
-          "$gt0150|Topic|.value='Any of the following antibiotic prophylaxis regimens is recommended as a single dose 30 to 60 minutes prior to the dental procedure.'",
           "$gt0149|Recommendation 1|.value=$gt0108+' '+$gt0113.value+' '+$gt0111.magnitude+$gt0111.unit+'.'",
           "$gt0151|Recommendation 2|.value=$gt0107+' '+$gt0113.value+' '+$gt0110.magnitude+$gt0110.unit+' (Cephalosporins should not be used in an individual with a history of anaphylaxis, angioedema, or urticarial with penicillin or ampicillin).'"
         ]
@@ -460,7 +460,6 @@
           "fired($gt0118)"
         ],
         "then": [
-          "$gt0150|Topic|.value='Any of the following antibiotic prophylaxis regimens is recommended as a single dose 30 to 60 minutes prior to the dental procedure.'",
           "$gt0149|Recommendation 1|.value=$gt0107+' '+$gt0113.value+' '+$gt0110.magnitude+$gt0110.unit+' or other first- or second- generation oral cephalosporin in equivalent adult or pediatric dosing.'",
           "$gt0151|Recommendation 2|.value=$gt0108+' '+$gt0113.value+' '+$gt0111.magnitude+$gt0111.unit'.'",
           "$gt0152|Recommendation 3|.value=$gt0109+' '+$gt0113.value+' '+$gt0112.magnitude+$gt0112.unit+'.'"
@@ -673,8 +672,8 @@
           }
         }
       },
-      "es-ar": {
-        "id": "es-ar",
+      "es": {
+        "id": "es",
         "terms": {
           "gt0001": {
             "id": "gt0001",
