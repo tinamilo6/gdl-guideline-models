@@ -40,6 +40,11 @@ language
 			>
 			accreditation = <"Hospital Alemão Oswaldo Cruz (HAOC)">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -129,6 +134,10 @@ In the context of an ACTION archetype insert this archetype directly into the 'A
 
 Specific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -142,7 +151,7 @@ Standards for the clinical structure and content of patient records (Complete do
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"926B8773E3FBB271F2820D4198B4F63E">
+		["MD5-CAM-1.0.1"] = <"c2e98ffb4498f138739d878c99dba213">
 		["build_uid"] = <"54847bc3-76e5-48b9-831f-d3002ef5cf63">
 		["revision"] = <"2.0.2">
 	>
@@ -575,6 +584,65 @@ När flera doser uttrycks, gör 'Mönstresekvensen' ordningen i vilken de ska k�
 					text = <"*Dose 3 (en)">
 					description = <"*The value of the amount of medication administered at one time. (en)">
 					comment = <"*For example: 1 mg, 1.5 ml, 0.125 g; or 1-2 ml, 12.5-20.5 mg. (en)">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Dosis">
+					description = <"La combinación de la cantidad de medicamento y el tiempo entre administraciones para un solo día, en el contexto de una orden de medicación o gestión de la medicación.">
+					comment = <"Por ejemplo: \"2 tabletas a las 6pm\" o \"20 mg tres veces al dia\". Por favor, tomar en cuenta: este cluster permite multiples ocurrencias para permitir la representación de un set completo de patrones de dosis para una sola orden de dosis.">
+				>
+				["at0037"] = <
+					text = <"Tiempo diario">
+					description = <"Detalles estructurados sobre el patron diario de tiempo de un solo día.">
+					comment = <"Por ejemplo: \"en la mañana\", \"a las 0600, 1400, 2100\".">
+				>
+				["at0102"] = <
+					text = <"Duración de administración">
+					description = <"Periodo de tiempo sobre el que una dosis única de la medicación o vacuna debe ser administrada. ">
+					comment = <"Por ejemplo: \"Administrar en más de 10 minutos\"">
+				>
+				["at0134"] = <
+					text = <"Tasa de administración">
+					description = <"La tasa a la que la medicación, por ejemplo una infusión, debe ser administrada. ">
+					comment = <"Por ejemplo: \"200 ml/h\". Usar el tipo de datos de texto para registrar las instrucciones no o semi cuantificables. ">
+				>
+				["at0135"] = <
+					text = <"Fórmula de la dosis">
+					description = <"La fórmula usada para calcular la cantidad de dosis o tasa de administración donde es dependiente de otros factores, como peso corporal o área de superficie.">
+					comment = <"Por ejemplo: \"10 mg/kg/dia\". El resultado de esta formula normalmente debería ser retenido en Dosis o Tasa/Duración de la Administración. Cuando medidas clínicas como peso corporal son usadas en el calculo de la dosis, un atributo LINK debe ser usado para especificar qué medida particular fue utilizada. ">
+				>
+				["at0144"] = <
+					text = <"Dosis 1">
+					description = <"La cantidad de medicación administrada en un solo momento. ">
+					comment = <"Por ejemplo: 1 mg, 1.5 ml, 0.125 g; o 1-2 mlo, 12.5-20.5 mg.">
+				>
+				["at0164"] = <
+					text = <"Secuencia de dosis">
+					description = <"La posición pensada para la presente dosis dentro de la secuencia general de dosis. ">
+					comment = <"Por ejemplo: \"1\", \"2\", \"3\". Cuando múltiples dosis son expresadas, el \"Patrón de sequencia\" hace explícito el orden en el que deben ser ejecutadas. Por ejemplo: (1) 1 tableta en la mañana, (2) 2 tabletas a las 2pm, (3) 1 tableta por la noche. ">
+				>
+				["at0176"] = <
+					text = <"Dosis alternativa">
+					description = <"Una represetación alternativa de la cantidad de medicación a ser administrada en un solo momento. ">
+					comment = <"Por ejemplo, puede ser utilizada para representar un valor basado en una unidad-dosis como \"tabletas\", cuando la cantidad de dosis está expresada como una unidad SI como \"mg\", o cuando es requerido expresar el volumen total de una infusión así como la candidad de ingrediente activo. ">
+				>
+				["at0178"] = <
+					text = <"Descripción de dosis">
+					description = <"Descripción textual de la dosis.">
+					comment = <"Por ejemplo: \"Aplicar ungüento en el área afectada hasta que brille\". Este elemento permite a los implementadores utilizar estructuras para incrementar/reducir dosis sin especificar necesariamente las dosis de una manera estructurada.">
+				>
+				["at0181"] = <
+					text = <"Dosis 2">
+					description = <"La cantidad de medicación administrada en un solo momento. ">
+					comment = <"Por ejemplo: 1 mg, 1.5 ml, 0.125 g; o 1-2 mlo, 12.5-20.5 mg.">
+				>
+				["at0182"] = <
+					text = <"Dosis 3">
+					description = <"La cantidad de medicación administrada en un solo momento. ">
+					comment = <"Por ejemplo: 1 mg, 1.5 ml, 0.125 g; o 1-2 mlo, 12.5-20.5 mg.">
 				>
 			>
 		>
