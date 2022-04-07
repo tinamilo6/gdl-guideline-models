@@ -40,8 +40,8 @@ language
 			>
 			accreditation = <"Hospital Alemão Oswaldo Cruz (HAOC)">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			author = <
 			>
 		>
@@ -134,8 +134,8 @@ In the context of an ACTION archetype insert this archetype directly into the 'A
 
 Specific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -587,7 +587,7 @@ När flera doser uttrycks, gör 'Mönstresekvensen' ordningen i vilken de ska k�
 				>
 			>
 		>
-		["es"] = <
+		["es-ar"] = <
 			items = <
 				["at0000"] = <
 					text = <"Dosis">

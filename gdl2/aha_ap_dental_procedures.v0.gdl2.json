@@ -29,8 +29,8 @@
         "misuse": "Not to be used to assess the AP needs for non-dental procedures.",
         "copyright": "@Cambio CDS"
       },
-      "es": {
-        "id": "es",
+      "es-ar": {
+        "id": "es-ar",
         "purpose": "Para sugerir régimenes de antibiótico profilaxis basados en el algoritmo de la AHA para un paciente al que se le realizarán ciertos procedimientos dentales.",
         "keywords": [
           "antibiotico profilaxis",
@@ -131,6 +131,10 @@
             "id": "gt0109",
             "path": "/description[at0017]/items[at0158]"
           },
+          "gt0113": {
+            "id": "gt0113",
+            "path": "/description[at0017]/items[at0140]/items[at0147]"
+          },
           "gt0110": {
             "id": "gt0110",
             "path": "/description[at0017]/items[openEHR-EHR-CLUSTER.dosage.v2]/items[at0144]"
@@ -142,10 +146,6 @@
           "gt0112": {
             "id": "gt0112",
             "path": "/description[at0017]/items[openEHR-EHR-CLUSTER.dosage.v2]/items[at0182]"
-          },
-          "gt0113": {
-            "id": "gt0113",
-            "path": "/description[at0017]/items[at0140]/items[at0147]"
           }
         }
       },
@@ -179,8 +179,8 @@
         "id": "gt0070",
         "priority": 22,
         "when": [
-          "$gt0046|Invasive dental procedure|==local::at0011|Yes|",
-          "($gt0047|Prosthetic cardiac valve or material|==local::at0011|Yes|)||(($gt0048|Previous, relapse, or recurrent IE|==local::at0011|Yes|)||(($gt0049|Congenital Heart Disease|==local::at0011|Yes|)||($gt0050|Cardiac transplant recipient who develop cardiac valvulopathy|==local::at0011|Yes|)))"
+          "$gt0046|Invasive dental procedure|.code=='at0011'",
+          "($gt0047|Prosthetic cardiac valve or material|.code=='at0011')||(($gt0048|Previous, relapse, or recurrent IE|.code=='at0011')||(($gt0049|Congenital Heart Disease|.code=='at0011')||($gt0050|Cardiac transplant recipient who develop cardiac valvulopathy|.code=='at0011')))"
         ],
         "then": [
           "$gt0150|Topic|.value='Antibiotic prophylaxis is recommended for the patient as a single dose 30 to 60 minutes prior to the dental procedure. Any of the following regimens are recommended.'"
@@ -201,8 +201,8 @@
         "priority": 20,
         "when": [
           "fired($gt0070)",
-          "$gt0052|Ability to take oral medication|==local::at0011|Yes|",
-          "($gt0054|Allergy to medication|==local::at0103|Allergic to Ampicillin|)||($gt0054|Allergy to medication|==local::at0102|Allergic to Penicillin|)"
+          "$gt0052|Ability to take oral medication|.code=='at0011'",
+          "($gt0054|Allergy to medication|.code=='at0103')||($gt0054|Allergy to medication|=='at0102')"
         ],
         "then": [
           "$gt0113|Route|=local::at0159|Oral|"
@@ -213,8 +213,8 @@
         "priority": 19,
         "when": [
           "fired($gt0070)",
-          "$gt0054|Allergy to medication|==local::at0091|None|",
-          "$gt0052|Ability to take oral medication|==local::at0011|Yes|"
+          "$gt0054|Allergy to medication|.code=='at0091'",
+          "$gt0052|Ability to take oral medication|.code=='at0011'"
         ],
         "then": [
           "$gt0113|Route|=local::at0159|Oral|"
@@ -225,8 +225,8 @@
         "priority": 18,
         "when": [
           "fired($gt0070)",
-          "$gt0052|Ability to take oral medication|==local::at0012|No|",
-          "($gt0054|Allergy to medication|==local::at0103|Allergic to Ampicillin|)||($gt0054|Allergy to medication|==local::at0102|Allergic to Penicillin|)"
+          "$gt0052|Ability to take oral medication|.code=='at0012'",
+          "($gt0054|Allergy to medication|.code=='at0103')||($gt0054|Allergy to medication|.code=='at0102')"
         ],
         "then": [
           "$gt0113|Route|=local::at0160|Intramuscular (IM) or Intravenous (IV)|"
@@ -237,8 +237,8 @@
         "priority": 17,
         "when": [
           "fired($gt0070)",
-          "$gt0054|Allergy to medication|==local::at0091|None|",
-          "$gt0052|Ability to take oral medication|==local::at0012|No|"
+          "$gt0054|Allergy to medication|.code=='at0091'",
+          "$gt0052|Ability to take oral medication|=='at0012'"
         ],
         "then": [
           "$gt0113|Route|=local::at0160|Intramuscular (IM) or Intravenous (IV)|"
@@ -672,8 +672,8 @@
           }
         }
       },
-      "es": {
-        "id": "es",
+      "es-ar": {
+        "id": "es-ar",
         "terms": {
           "gt0001": {
             "id": "gt0001",
