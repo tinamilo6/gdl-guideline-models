@@ -260,7 +260,7 @@ _Select a medical specialty below to view the available apps._
 
 * TIMI Risk Index (TRI) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/TRI/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/TRI/1?language=sv))
 
-* TIMI Risk Score for Unstable Angina and NSTEMI - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/TIMI_UA_NSTEMI/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/TIMI_UA_NSTEMI/1?language=sv))
+* TIMI Risk Score for UA and NSTEMI - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/timi_ua_nstemi/1?language=en))
 
 * TIMI Score for STEMI - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/TIMI_STEMI/1?language=en))
 
