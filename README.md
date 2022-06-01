@@ -244,7 +244,7 @@ _Select a medical specialty below to view the available apps._
 
 * Rapid Arterial oCclusion Evaluation Scale for Stroke (RACE) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/RACE/1?language=en))
 
-* Rated Perceived Exertion Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Rated_perceived_exertion_scale/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Rated_perceived_exertion_scale/1?language=sv))
+* Rated Perceived Exertion (RPE) Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/rpe/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/rpe/1?language=sv))
 
 * READMITS Score for Readmissions in Acute MI - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/READMITS_Score_guideline/1?language=en))
 
