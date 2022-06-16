@@ -186,7 +186,7 @@ _Select a medical specialty below to view the available apps._
 
 * Dual Antiplatelet Therapy (DAPT) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/DAPT_score/1?language=en))
 
-* Duke Criteria - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Duke_Criteria_for_IE/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Duke_Criteria_for_IE/1?language=sv))
+* Duke Criteria - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/duke_criteria_for_ie/1?language=en))
 
 * Duke Treadmill Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Duke_Treadmill_Score/1?language=en))
 
