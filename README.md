@@ -1049,7 +1049,7 @@ _Select a medical specialty below to view the available apps._
 
 * Open Fracture Gustilo Classification - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Open_fracture_Gustilo_classification/1?language=en))
 
-* Patient Activity Scale (PAS) for RA - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Patient_Activity_Scale_PAS_for_RA_guideline/1?language=en))
+* Patient Activity Scale (PAS) for RA - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/pas_for_ra/1?language=en))
 
 * Recurrent Instability of the Patella (RIP) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Recurrent_Instability_of_the_patella_RIP_score/1?language=en))
 
