@@ -617,7 +617,7 @@ _Select a medical specialty below to view the available apps._
 
 * Geriatric risk profile - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Geriatric_Risk_Profile/1?language=en))
 
-* Modified Norton Scale (MNS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/MNS/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/MNS/1?language=sv))
+* Modified Norton Scale (MNS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/mns/1?language=en))
 
 * Mini Nutritional Assessment (MNA) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/MNA/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/MNA/1?language=sv))
 
