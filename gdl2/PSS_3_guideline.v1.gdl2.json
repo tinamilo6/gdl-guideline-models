@@ -86,23 +86,23 @@
       }
     },
     "default_actions": [
-      "$gt0017|X|='Patient is presenting with'",
-      "$gt0008|Suicide risk|='Not positive for suicidality by ED-SAFE PSS-3'"
+      "$gt0017|X|='Patient is presenting with:'"
     ],
     "rules": {
       "gt0018": {
         "id": "gt0018",
-        "priority": 5,
+        "priority": 6,
         "when": [
           "$gt0003|Over the past two weeks, have you felt down, depressed, or hopeless?|==local::at0006|Yes|"
         ],
         "then": [
-          "$gt0017|X|=$gt0017+$gt0013.term"
+          "$gt0017|X|=$gt0017+$gt0013.term",
+          "$gt0008|Suicide risk|='Not positive for suicidality by ED-SAFE PSS-3'"
         ]
       },
       "gt0019": {
         "id": "gt0019",
-        "priority": 4,
+        "priority": 5,
         "when": [
           "$gt0004|Over the past two weeks, have you had thoughts of killing yourself?|==local::at0006|Yes|"
         ],
@@ -113,7 +113,7 @@
       },
       "gt0022": {
         "id": "gt0022",
-        "priority": 3,
+        "priority": 4,
         "when": [
           "$gt0005|In your lifetime, have you ever attempted to kill yourself?|==local::at0006|Yes|",
           "($gt0006|When did your last attempt occur?|==local::at0017|Today|)||(($gt0006|When did your last attempt occur?|==local::at0018|Within 30 days|)||($gt0006|When did your last attempt occur?|==local::at0019|Within 1-6 months|))"
@@ -125,7 +125,7 @@
       },
       "gt0023": {
         "id": "gt0023",
-        "priority": 2,
+        "priority": 3,
         "when": [
           "$gt0005|In your lifetime, have you ever attempted to kill yourself?|==local::at0006|Yes|",
           "($gt0006|When did your last attempt occur?|==local::at0020|>6 months|)||(($gt0006|When did your last attempt occur?|==local::at0007|Refused to answer|)||($gt0006|When did your last attempt occur?|==local::at0021|Does not know|))"
@@ -137,14 +137,24 @@
       },
       "gt0020": {
         "id": "gt0020",
-        "priority": 1,
+        "priority": 2,
         "when": [
-          "$gt0003|Over the past two weeks, have you felt down, depressed, or hopeless?|!=null",
-          "$gt0004|Over the past two weeks, have you had thoughts of killing yourself?|!=null",
-          "(($gt0005|In your lifetime, have you ever attempted to kill yourself?|==local::at0006|Yes|)&&($gt0006|When did your last attempt occur?|!=null))||(($gt0005|In your lifetime, have you ever attempted to kill yourself?|==local::at0005|No|)||($gt0005|In your lifetime, have you ever attempted to kill yourself?|==local::at0007|Refused to answer|))"
+          "((fired($gt0018))||(fired($gt0019))||(fired($gt0022))||(fired($gt0023)))"
         ],
         "then": [
           "$gt0011|Interpretation|.value=$gt0017"
+        ]
+      },
+      "gt0024": {
+        "id": "gt0024",
+        "priority": 1,
+        "when": [
+          "$gt0003|Over the past two weeks, have you felt down, depressed, or hopeless?|!=local::at0006|Yes|",
+          "$gt0004|Over the past two weeks, have you had thoughts of killing yourself?|!=local::at0006|Yes|",
+          "$gt0005|In your lifetime, have you ever attempted to kill yourself?|!=local::at0006|Yes|"
+        ],
+        "then": [
+          "$gt0008|Suicide risk|='Not positive for suicidality by ED-SAFE PSS-3'"
         ]
       }
     }
@@ -191,22 +201,22 @@
           },
           "gt0013": {
             "id": "gt0013",
-            "text": "\\nDepressed mood",
+            "text": "\nDepressed mood",
             "description": ""
           },
           "gt0014": {
             "id": "gt0014",
-            "text": "\\nActive suicidal ideation",
+            "text": "\nActive suicidal ideation",
             "description": ""
           },
           "gt0015": {
             "id": "gt0015",
-            "text": "\\nLifetime suicide attempt",
+            "text": "\nLifetime suicide attempt",
             "description": ""
           },
           "gt0016": {
             "id": "gt0016",
-            "text": "\\nRecent suicide attempt",
+            "text": "\nRecent suicide attempt",
             "description": ""
           },
           "gt0017": {
@@ -216,23 +226,28 @@
           },
           "gt0018": {
             "id": "gt0018",
-            "text": "Depressed mood"
+            "text": "Set Depressed mood"
           },
           "gt0019": {
             "id": "gt0019",
-            "text": "Active suicidal ideation"
+            "text": "Set Active suicidal ideation"
           },
           "gt0020": {
             "id": "gt0020",
-            "text": "Interpretation"
+            "text": "Set Interpretation"
           },
           "gt0022": {
             "id": "gt0022",
-            "text": "Recent suicide attempt"
+            "text": "Set Recent suicide attempt"
           },
           "gt0023": {
             "id": "gt0023",
-            "text": "Lifetime suicide attempt"
+            "text": "Set Lifetime suicide attempt"
+          },
+          "gt0024": {
+            "id": "gt0024",
+            "text": "Not positive for suicidal risk",
+            "description": ""
           }
         }
       }
