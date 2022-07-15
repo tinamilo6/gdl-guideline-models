@@ -11,7 +11,7 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with\nDepressed mood\nActive suicidal ideation\nRecent suicide attempt
+      gt0011|Interpretation: Patient is presenting with:\nDepressed mood\nActive suicidal ideation\nRecent suicide attempt
 - id: Positive, Lifetime suicide attempt
   input:
     1:
@@ -22,7 +22,7 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with\nDepressed mood\nActive suicidal ideation\nLifetime suicide attempt
+      gt0011|Interpretation: Patient is presenting with:\nDepressed mood\nActive suicidal ideation\nLifetime suicide attempt
 - id: Not positive for suicidality
   input:
     1:
@@ -32,7 +32,6 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Not positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with
 - id: Not positive, Depressed mood
   input:
     1:
@@ -42,7 +41,7 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Not positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with\nDepressed mood
+      gt0011|Interpretation: Patient is presenting with:\nDepressed mood
 - id: Positive, Active suicidal ideation
   input:
     1:
@@ -52,7 +51,7 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with\nActive suicidal ideation
+      gt0011|Interpretation: Patient is presenting with:\nActive suicidal ideation
 - id: Positive, Recent suicide attempt
   input:
     1:
@@ -63,7 +62,7 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with\nRecent suicide attempt
+      gt0011|Interpretation: Patient is presenting with:\nRecent suicide attempt
 - id: Positive , Lifetime suicide
   input:
     1:
@@ -74,4 +73,4 @@ test_cases:
   expected_output:
     1:
       gt0008|Suicide risk: Positive for suicidality by ED-SAFE PSS-3
-      gt0011|Interpretation: Patient is presenting with\nLifetime suicide attempt
+      gt0011|Interpretation: Patient is presenting with:\nLifetime suicide attempt
