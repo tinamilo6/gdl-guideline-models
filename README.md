@@ -11,22 +11,22 @@ We've gathered all of the available applications in one place and organized them
 
 If you would like to test an app, simply click on "ENG" to access the English version, and "SWE" for the Swedish version. To view a detailed description of the app and its components, click on the application name.
 
-### *Published Apps: 655*
+### *Published Apps: 657*
 
 ----------
 
 ### Latest added
 
-1. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
-2. Modified Sgarbossa's Criteria for MI in Left Bundle Branch Block - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/modified_Sgarbossa_s_criteria/1?language=en))
-3. Cardiovascular Risk PROCAM Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/PROCAM_score_guideline/1?language=en))
-4. Spleen Injury Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Spleen_Injury_Scale_guideline/1?language=en))
-5. EMTALA Emergency Medical Care - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMTALA_guideline/1?language=en))
-6. Fatigue Severity Scale (FSS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatigue_Severity_Scale_FSS_guideline/1?language=en))
-7. Blood Type Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Blood_Type_Calculator_guideline/1?language=en))
-8. Albumin Globulin Ratio Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Albumin_Globulin_Ratio_guideline/1?language=en))
-9. Metabolic Syndrome Criteria - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Metabolic_Syndrome_Criteria_guideline/1?language=en))
-10. Morse Fall Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Morse_Fall_Scale_guideline/1?language=en))
+1. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
+2. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
+3. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
+4. Modified Sgarbossa's Criteria for MI in Left Bundle Branch Block - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/modified_Sgarbossa_s_criteria/1?language=en))
+5. Cardiovascular Risk PROCAM Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/PROCAM_score_guideline/1?language=en))
+6. Spleen Injury Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Spleen_Injury_Scale_guideline/1?language=en))
+7. EMTALA Emergency Medical Care - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMTALA_guideline/1?language=en))
+8. Fatigue Severity Scale (FSS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatigue_Severity_Scale_FSS_guideline/1?language=en))
+9. Blood Type Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Blood_Type_Calculator_guideline/1?language=en))
+10. Albumin Globulin Ratio Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Albumin_Globulin_Ratio_guideline/1?language=en))
 
 ----------
 
@@ -435,6 +435,8 @@ _Select a medical specialty below to view the available apps._
 
 * Shock Index - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Shock_Index/1?language=en))
 
+* Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
+
 * Simplified Pulmonary Embolism Severity Index (sPESI) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Simplified_PESI/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Simplified_PESI/1?language=sv))
 
 * SIRS, Sepsis, and Septic Shock Criteria - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SIRS_Sepsis_Septic_Shock_Criteria_guideline/1?language=en))
@@ -506,6 +508,8 @@ _Select a medical specialty below to view the available apps._
 * Crohn's Disease Activity Index (CDAI) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Crohns_Disease_Activity_Index_CDAI/1?language=en)) 
 
 * DeMeester Score for GERD - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/DMS/1?language=en)) 
+
+* EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
 
 * Fatty Liver Index - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatty_Liver_Index/1?language=en))
 
