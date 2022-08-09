@@ -11,22 +11,22 @@ We've gathered all of the available applications in one place and organized them
 
 If you would like to test an app, simply click on "ENG" to access the English version, and "SWE" for the Swedish version. To view a detailed description of the app and its components, click on the application name.
 
-### *Published Apps: 657*
+### *Published Apps: 658*
 
 ----------
 
 ### Latest added
 
-1. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
-2. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
-3. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
-4. Modified Sgarbossa's Criteria for MI in Left Bundle Branch Block - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/modified_Sgarbossa_s_criteria/1?language=en))
-5. Cardiovascular Risk PROCAM Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/PROCAM_score_guideline/1?language=en))
-6. Spleen Injury Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Spleen_Injury_Scale_guideline/1?language=en))
-7. EMTALA Emergency Medical Care - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMTALA_guideline/1?language=en))
-8. Fatigue Severity Scale (FSS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatigue_Severity_Scale_FSS_guideline/1?language=en))
-9. Blood Type Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Blood_Type_Calculator_guideline/1?language=en))
-10. Albumin Globulin Ratio Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Albumin_Globulin_Ratio_guideline/1?language=en))
+1. NEXUS Chest Decision Instrument for Blunt Chest Trauma - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Nexus_chest_decision_instrument_for_blunt_chest_trauma/1?language=en))
+2. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
+3. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
+4. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
+5. Modified Sgarbossa's Criteria for MI in Left Bundle Branch Block - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/modified_Sgarbossa_s_criteria/1?language=en))
+6. Cardiovascular Risk PROCAM Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/PROCAM_score_guideline/1?language=en))
+7. Spleen Injury Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Spleen_Injury_Scale_guideline/1?language=en))
+8. EMTALA Emergency Medical Care - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMTALA_guideline/1?language=en))
+9. Fatigue Severity Scale (FSS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatigue_Severity_Scale_FSS_guideline/1?language=en))
+10. Blood Type Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Blood_Type_Calculator_guideline/1?language=en))
 
 ----------
 
@@ -1494,6 +1494,8 @@ _Select a medical specialty below to view the available apps._
 * New Orleans/Charity Head Trauma/Injury Rule - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/New_Orleans_Charity_Head_Trauma_Injury_Rule/1?language=en))
 
 * NEXUS Chest CT Decision Instrument for CT Imaging - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/NEXUS_Chest_CT_Decision_Instrument_for_CT_Imaging/1?language=en))
+
+* NEXUS Chest Decision Instrument for Blunt Chest Trauma - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Nexus_chest_decision_instrument_for_blunt_chest_trauma/1?language=en))
 
 * NEXUS Criteria for C-Spine Imaging - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/NEXUS_Criteria_C-Spine_Imaging_guideline/1?language=en))
 
