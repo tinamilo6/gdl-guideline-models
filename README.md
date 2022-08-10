@@ -11,22 +11,22 @@ We've gathered all of the available applications in one place and organized them
 
 If you would like to test an app, simply click on "ENG" to access the English version, and "SWE" for the Swedish version. To view a detailed description of the app and its components, click on the application name.
 
-### *Published Apps: 658*
+### *Published Apps: 659*
 
 ----------
 
 ### Latest added
 
-1. NEXUS Chest Decision Instrument for Blunt Chest Trauma - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Nexus_chest_decision_instrument_for_blunt_chest_trauma/1?language=en))
-2. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
-3. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
-4. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
-5. Modified Sgarbossa's Criteria for MI in Left Bundle Branch Block - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/modified_Sgarbossa_s_criteria/1?language=en))
-6. Cardiovascular Risk PROCAM Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/PROCAM_score_guideline/1?language=en))
-7. Spleen Injury Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Spleen_Injury_Scale_guideline/1?language=en))
-8. EMTALA Emergency Medical Care - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMTALA_guideline/1?language=en))
-9. Fatigue Severity Scale (FSS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatigue_Severity_Scale_FSS_guideline/1?language=en))
-10. Blood Type Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Blood_Type_Calculator_guideline/1?language=en))
+1. BISAP Score for Pancreatitis Mortality - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/BISAP_score/1?language=en))
+2. NEXUS Chest Decision Instrument for Blunt Chest Trauma - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Nexus_chest_decision_instrument_for_blunt_chest_trauma/1?language=en))
+3. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
+4. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
+5. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
+6. Modified Sgarbossa's Criteria for MI in Left Bundle Branch Block - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/modified_Sgarbossa_s_criteria/1?language=en))
+7. Cardiovascular Risk PROCAM Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/PROCAM_score_guideline/1?language=en))
+8. Spleen Injury Scale - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Spleen_Injury_Scale_guideline/1?language=en))
+9. EMTALA Emergency Medical Care - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMTALA_guideline/1?language=en))
+10. Fatigue Severity Scale (FSS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Fatigue_Severity_Scale_FSS_guideline/1?language=en))
 
 ----------
 
@@ -346,6 +346,8 @@ _Select a medical specialty below to view the available apps._
 * Appendicitis Inflammatory Response Score (AIR Score) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/AIR/1?language=en))/([_SWE_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/AIR/1?language=sv))
 
 * AWOL Score for Delirium - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/AWOL_Score_for_Delirium_guideline/1?language=en))
+
+* BISAP Score for Pancreatitis Mortality - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/BISAP_score/1?language=en))
 
 * Brescia-COVID Respiratory Severity Scale (BCRSS)/Algorithm - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Brescia_COVID_Respiratory_Severity_Scale_BCRSS_Algorithm_guideline/1?language=en))
 
