@@ -105,7 +105,7 @@ NKDEP - National Kideny Disease Education Program, GFR Calculators. Available at
 Schwartz GJ, Muñoz A, Schneider MF, et al. New equations to estimate GFR in children with CKD. J Am Soc Nephrol. 2009: 20 (3): 629-37.
 
 Schwartz GJ and Work DF. Measurement and estimation of GFR in children and adolescents. Clin J Am Soc Nephrol. 2009; 4 (11): 1832-43.">
-		["MD5-CAM-1.0.1"] = <"54BE2264C4EF8A637023DA25E85132E1">
+		["MD5-CAM-1.0.1"] = <"7BA0FA483D46EA4956950641E57C4B1F">
 	>
 
 definition
@@ -144,6 +144,22 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Formula
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0023, 	-- Cockcroft-Gault formula
+													at0024, 	-- MDRD formula
+													at0029, 	-- Revised Lund-Malmö formula
+													at0028, 	-- Revised Schwartz formula (Age group 1-16 years)
+													at0025, 	-- CKD-EPI Creatinine formula
+													at0031, 	-- CKD-EPI Cystatin C formula
+													at0032]	-- CKD-EPI Creatinine Cystatin C formula
+												}
+											}
 										}
 									}
 								}
@@ -270,12 +286,44 @@ ontology
 					description = <"*Other formula(en)">
 				>
 				["at0020"] = <
-					text = <"*New element(en)">
+					text = <"*Estimated Glomerular Filtration Rate - Relative(en)">
 					description = <"**(en)">
 				>
 				["at0021"] = <
 					text = <"*LM Revised(en)">
 					description = <"*Revised Lund-Malmö equation(en)">
+				>
+				["at0022"] = <
+					text = <"*Formula(en)">
+					description = <"**(en)">
+				>
+				["at0023"] = <
+					text = <"*Cockcroft-Gault formula(en)">
+					description = <"**(en)">
+				>
+				["at0024"] = <
+					text = <"*MDRD formula(en)">
+					description = <"**(en)">
+				>
+				["at0025"] = <
+					text = <"*CKD-EPI Creatinine formula(en)">
+					description = <"**(en)">
+				>
+				["at0028"] = <
+					text = <"*Revised Schwartz formula (Age group 1-16 years)(en)">
+					description = <"**(en)">
+				>
+				["at0029"] = <
+					text = <"*Revised Lund-Malmö formula(en)">
+					description = <"*Revised Lund-Malmö Study equation(en)">
+				>
+				["at0031"] = <
+					text = <"*CKD-EPI Cystatin C formula(en)">
+					description = <"**(en)">
+				>
+				["at0032"] = <
+					text = <"*CKD-EPI Creatinine Cystatin C formula(en)">
+					description = <"**(en)">
 				>
 			>
 		>
@@ -354,12 +402,44 @@ ontology
 					description = <"*Other formula(en)">
 				>
 				["at0020"] = <
-					text = <"*New element(en)">
+					text = <"*Estimated Glomerular Filtration Rate - Relative(en)">
 					description = <"**(en)">
 				>
 				["at0021"] = <
 					text = <"*LM Revised(en)">
 					description = <"*Revised Lund-Malmö equation(en)">
+				>
+				["at0022"] = <
+					text = <"*Formula(en)">
+					description = <"**(en)">
+				>
+				["at0023"] = <
+					text = <"*Cockcroft-Gault formula(en)">
+					description = <"**(en)">
+				>
+				["at0024"] = <
+					text = <"*MDRD formula(en)">
+					description = <"**(en)">
+				>
+				["at0025"] = <
+					text = <"*CKD-EPI Creatinine formula(en)">
+					description = <"**(en)">
+				>
+				["at0028"] = <
+					text = <"*Revised Schwartz formula (Age group 1-16 years)(en)">
+					description = <"**(en)">
+				>
+				["at0029"] = <
+					text = <"*Revised Lund-Malmö formula(en)">
+					description = <"*Revised Lund-Malmö Study equation(en)">
+				>
+				["at0031"] = <
+					text = <"*CKD-EPI Cystatin C formula(en)">
+					description = <"**(en)">
+				>
+				["at0032"] = <
+					text = <"*CKD-EPI Creatinine Cystatin C formula(en)">
+					description = <"**(en)">
 				>
 			>
 		>
@@ -445,6 +525,38 @@ ontology
 					text = <"LM Revised">
 					description = <"Revised Lund-Malmö Study equation">
 				>
+				["at0022"] = <
+					text = <"Formula">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Cockcroft-Gault formula">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"MDRD formula">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"CKD-EPI Creatinine formula">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Revised Schwartz formula (Age group 1-16 years)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Revised Lund-Malmö formula">
+					description = <"Revised Lund-Malmö Study equation">
+				>
+				["at0031"] = <
+					text = <"CKD-EPI Cystatin C formula">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"CKD-EPI Creatinine Cystatin C formula">
+					description = <"">
+				>
 			>
 		>
 		["sv"] = <
@@ -522,12 +634,44 @@ ontology
 					description = <"Andra formler.">
 				>
 				["at0020"] = <
-					text = <"*New element(en)">
+					text = <"*Estimated Glomerular Filtration Rate - Relative(en)">
 					description = <"**(en)">
 				>
 				["at0021"] = <
 					text = <"*LM Revised(en)">
 					description = <"*Revised Lund-Malmö equation(en)">
+				>
+				["at0022"] = <
+					text = <"*Formula(en)">
+					description = <"**(en)">
+				>
+				["at0023"] = <
+					text = <"*Cockcroft-Gault formula(en)">
+					description = <"**(en)">
+				>
+				["at0024"] = <
+					text = <"*MDRD formula(en)">
+					description = <"**(en)">
+				>
+				["at0025"] = <
+					text = <"*CKD-EPI Creatinine formula(en)">
+					description = <"**(en)">
+				>
+				["at0028"] = <
+					text = <"*Revised Schwartz formula (Age group 1-16 years)(en)">
+					description = <"**(en)">
+				>
+				["at0029"] = <
+					text = <"*Revised Lund-Malmö formula(en)">
+					description = <"*Revised Lund-Malmö Study equation(en)">
+				>
+				["at0031"] = <
+					text = <"*CKD-EPI Cystatin C formula(en)">
+					description = <"**(en)">
+				>
+				["at0032"] = <
+					text = <"*CKD-EPI Creatinine Cystatin C formula(en)">
+					description = <"**(en)">
 				>
 			>
 		>
@@ -606,12 +750,44 @@ ontology
 					description = <"Other formula">
 				>
 				["at0020"] = <
-					text = <"*New element(en)">
+					text = <"*Estimated Glomerular Filtration Rate - Relative(en)">
 					description = <"**(en)">
 				>
 				["at0021"] = <
 					text = <"*LM Revised(en)">
 					description = <"*Revised Lund-Malmö equation(en)">
+				>
+				["at0022"] = <
+					text = <"*Formula(en)">
+					description = <"**(en)">
+				>
+				["at0023"] = <
+					text = <"*Cockcroft-Gault formula(en)">
+					description = <"**(en)">
+				>
+				["at0024"] = <
+					text = <"*MDRD formula(en)">
+					description = <"**(en)">
+				>
+				["at0025"] = <
+					text = <"*CKD-EPI Creatinine formula(en)">
+					description = <"**(en)">
+				>
+				["at0028"] = <
+					text = <"*Revised Schwartz formula (Age group 1-16 years)(en)">
+					description = <"**(en)">
+				>
+				["at0029"] = <
+					text = <"*Revised Lund-Malmö formula(en)">
+					description = <"*Revised Lund-Malmö Study equation(en)">
+				>
+				["at0031"] = <
+					text = <"*CKD-EPI Cystatin C formula(en)">
+					description = <"**(en)">
+				>
+				["at0032"] = <
+					text = <"*CKD-EPI Creatinine Cystatin C formula(en)">
+					description = <"**(en)">
 				>
 			>
 		>

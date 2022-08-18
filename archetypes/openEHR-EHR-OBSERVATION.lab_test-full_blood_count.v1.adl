@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4; uid=2cafc316-450a-3c73-a406-5c15f8e5ae0c)
 	openEHR-EHR-OBSERVATION.lab_test-full_blood_count.v1
 specialize
 	openEHR-EHR-OBSERVATION.lab_test.v1
@@ -43,7 +43,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"0">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
 		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology
@@ -54,7 +54,8 @@ IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Avai
 
 
 ">
-		["MD5-CAM-1.0.1"] = <"BD0EEC5169553DCF4947CC83D0A35826">
+		["build_uid"] = <"1cc20a52-e26b-3deb-9e28-174e9816f2ea">
+		["MD5-CAM-1.0.1"] = <"BAA0017317899B2FAF79A27DAF2DD31C">
 	>
 
 definition
@@ -97,7 +98,7 @@ definition
 										exclude
 											archetype_id/value matches {/.*/}
 									}
-									ELEMENT[at0078.4] occurrences matches {0..1} matches {	-- Haemoglobin
+									ELEMENT[at0078.4] occurrences matches {0..1} matches {	-- Hemoglobin
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::119]>
@@ -108,6 +109,9 @@ definition
 													>
 													["2"] = <
 														units = <"gm/dl">
+													>
+													["3"] = <
+														units = <"mg/dl">
 													>
 												>
 											>
@@ -235,6 +239,9 @@ definition
 													["2"] = <
 														units = <"cells/uL">
 													>
+													["3"] = <
+														units = <"10*3/uL">
+													>
 												>
 											>
 										}
@@ -254,11 +261,25 @@ definition
 												property = <[openehr::119]>
 												list = <
 													["1"] = <
-														units = <"10*9/l">
-														magnitude = <|>=0.0|>
+														units = <"10^3/uL">
 													>
 													["2"] = <
-														units = <"10*3/mm3">
+														units = <"10*9/l">
+													>
+													["3"] = <
+														units = <"cells/microL">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0.27] occurrences matches {0..1} matches {	-- Myeloblasts
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"%">
 													>
 												>
 											>
@@ -276,6 +297,13 @@ definition
 																magnitude = <|>=0.0|>
 																precision = <|3|>
 															>
+															["2"] = <
+																units = <"%">
+															>
+															["3"] = <
+																units = <"cells/uL">
+																magnitude = <|>=0.0|>
+															>
 														>
 													>
 												}
@@ -287,6 +315,25 @@ definition
 														list = <
 															["1"] = <
 																units = <"10*9/l">
+																magnitude = <|>=0.0|>
+															>
+															["2"] = <
+																units = <"%">
+															>
+															["3"] = <
+																units = <"cells/uL">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0.25] occurrences matches {0..1} matches {	-- NLR
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
 																magnitude = <|>=0.0|>
 															>
 														>
@@ -325,12 +372,14 @@ definition
 											ELEMENT[at0078.19] occurrences matches {0..1} matches {	-- Eosinophils
 												value matches {
 													C_DV_QUANTITY <
-														property = <[openehr::119]>
+														property = <[openehr::380]>
 														list = <
 															["1"] = <
 																units = <"10*9/l">
 																magnitude = <|>=0.0|>
-																precision = <|3|>
+															>
+															["2"] = <
+																units = <"%">
 															>
 														>
 													>
@@ -344,6 +393,18 @@ definition
 										}
 									}
 									ELEMENT[at0078] occurrences matches {0..*} matches {*}
+									ELEMENT[at0.26] occurrences matches {0..1} matches {	-- Reticulocyte count
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"%">
+													>
+												>
+											>
+										}
+									}
 									allow_archetype CLUSTER[at0089] occurrences matches {0..*} matches {	-- Per-result annotation
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.lab_result_annotation(-[a-zA-Z0-9_]+)*\.v1/}
@@ -392,7 +453,7 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
-							allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Laboratory details  
+							allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Laboratory details
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
 								exclude
@@ -417,6 +478,18 @@ ontology
 				["at0.24"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0.25"] = <
+					text = <"NLR">
+					description = <"Neutrophil to Lymphocyte ratio (NLR)">
+				>
+				["at0.26"] = <
+					text = <"Reticulocyte count">
+					description = <"*">
+				>
+				["at0.27"] = <
+					text = <"Myeloblasts">
+					description = <"The proportion of  immature white blood cells">
 				>
 				["at0000"] = <
 					text = <"Laboratory test">
@@ -456,7 +529,7 @@ This archetype also acts as the parent for specialisations appropriate for more 
 					description = <"Unique identifiers used in delivery of the care process.">
 				>
 				["at0017"] = <
-					text = <"Laboratory details  ">
+					text = <"Laboratory details">
 					description = <"Demographic details of the laboratory with responsibility for the test. Details of secondary laboratories may also be included.">
 				>
 				["at0037"] = <
@@ -493,7 +566,7 @@ This archetype also acts as the parent for specialisations appropriate for more 
 				>
 				["at0068"] = <
 					text = <"Laboratory test result identifier">
-					description = <"The identifier given to the laboratory test result of a pathology 
+					description = <"The identifier given to the laboratory test result of a pathology
 investigation.">
 				>
 				["at0073"] = <
@@ -506,7 +579,7 @@ investigation.">
 				>
 				["at0075"] = <
 					text = <"Datetime result issued">
-					description = <"The date and/or time that the result was issued for the recorded 
+					description = <"The date and/or time that the result was issued for the recorded
 ‘test status’. ">
 					comment = <"The date and time related to the results status is
 useful for version control and cumulative results for the report.">
@@ -529,7 +602,7 @@ useful for version control and cumulative results for the report.">
 				>
 				["at0078.12"] = <
 					text = <"Platelet count">
-					description = <"The number of platelets per litre">
+					description = <"The number of platelets per liter">
 				>
 				["at0078.13"] = <
 					text = <"White cell count">
@@ -576,7 +649,7 @@ useful for version control and cumulative results for the report.">
 					description = <"The features of the blood film on microscopy">
 				>
 				["at0078.4"] = <
-					text = <"Haemoglobin">
+					text = <"Hemoglobin">
 					description = <"The mass concentration of haemoglobin">
 				>
 				["at0078.5"] = <
@@ -614,6 +687,18 @@ useful for version control and cumulative results for the report.">
 				["at0.24"] = <
 					text = <"*Tree(en)">
 					description = <"*@ internal @(en)">
+				>
+				["at0.25"] = <
+					text = <"NLR">
+					description = <"**(en)">
+				>
+				["at0.26"] = <
+					text = <"Reticulocyter">
+					description = <"**(en)">
+				>
+				["at0.27"] = <
+					text = <"*Myeloblasts (en)">
+					description = <"*The proportion of  immature white blood cells (en)">
 				>
 				["at0000"] = <
 					text = <"*Laboratory test(en)">
@@ -690,7 +775,7 @@ This archetype also acts as the parent for specialisations appropriate for more 
 				>
 				["at0068"] = <
 					text = <"*Laboratory test result identifier(en)">
-					description = <"*The identifier given to the laboratory test result of a pathology 
+					description = <"*The identifier given to the laboratory test result of a pathology
 investigation.(en)">
 				>
 				["at0073"] = <
@@ -703,7 +788,7 @@ investigation.(en)">
 				>
 				["at0075"] = <
 					text = <"*Datetime result issued(en)">
-					description = <"*The date and/or time that the result was issued for the recorded 
+					description = <"*The date and/or time that the result was issued for the recorded
 ‘test status’. (en)">
 					comment = <"*The date and time related to the results status is
 useful for version control and cumulative results for the report.(en)">
@@ -765,7 +850,7 @@ useful for version control and cumulative results for the report.(en)">
 					description = <"Trombocyternas storleksvariation">
 				>
 				["at0078.22"] = <
-					text = <"*Plateletcrit(en)">
+					text = <"Plateletcrit">
 					description = <"*The proportion of the volume of blood taken up by platelets(en)">
 				>
 				["at0078.23"] = <
@@ -773,8 +858,8 @@ useful for version control and cumulative results for the report.(en)">
 					description = <"Mikroskopisk undersökning av blodutstryck">
 				>
 				["at0078.4"] = <
-					text = <"Hemoglobin (Hb)">
-					description = <"Koncentration hemoglobin">
+					text = <"Hemoglobin">
+					description = <"*The mass concentration of haemoglobin(en)">
 				>
 				["at0078.5"] = <
 					text = <"Erytrocyter">

@@ -12,6 +12,9 @@
       "organisation": "Cambio CDS",
       "email": "models@cambiocds.com"
     },
+    "other_contributors": [
+      "Daniel Keszthelyi"
+    ],
     "lifecycle_state": "Author draft",
     "details": {
       "en": {
@@ -23,6 +26,7 @@
     },
     "other_details": {
       "references": "Borgman MA, Maegele M, Wade CE, Blackbourne LH, Spinella PC. Pediatric trauma BIG score: predicting mortality in children after military and civilian trauma. Pediatrics. 2011 Apr;127(4):e892-7. doi: 10.1542/peds.2010-2439. Epub 2011 Mar 21. PMID: 21422095."
+
     }
   },
   "definition": {
@@ -35,6 +39,7 @@
         "elements": {
           "gt0003": {
             "id": "gt0003",
+
             "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0004]"
           },
           "gt0004": {
@@ -125,6 +130,7 @@
           "$gt0009|Predicted in-hospital mortality|.magnitude=(1/(1+2.71828^((-1)*$gt0014.magnitude)))*100",
           "$gt0009|Predicted in-hospital mortality|.precision=1",
           "$gt0009|Predicted in-hospital mortality|.unit='%'"
+
         ]
       }
     }
