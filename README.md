@@ -11,22 +11,22 @@ We've gathered all of the available applications in one place and organized them
 
 If you would like to test an app, simply click on "ENG" to access the English version, and "SWE" for the Swedish version. To view a detailed description of the app and its components, click on the application name.
 
-### *Published Apps: 664*
+### *Published Apps: 665*
 
 ----------
 
 ### Latest added
 
-1. Elderly Mobility Scale (EMS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMS/1?language=en))
-2. Pediatric Trauma BIG Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Pediatric_trauma_BIG_score/1?language=en))
-3. MAGGIC Risk Calculator for Heart Failure - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/MAGGIC_Risk_Calculator_for_Heart_Failure_guideline/1?language=en))
-4. Acute Decompensated Heart Failure National Registry (ADHERE) Algorithm - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Acute_decompensated_heart_failure_national_registry_adhere_algorithm.v0.gdl2/0?language=en))
-5. Patient Activity Scale II (PAS II) for RA - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Patient_Activity_Scale_II_PAS_II_for_RA_guideline/1?language=en))
-6. BISAP Score for Pancreatitis Mortality - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/BISAP_score/1?language=en))
-7. NEXUS Chest Decision Instrument for Blunt Chest Trauma - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Nexus_chest_decision_instrument_for_blunt_chest_trauma/1?language=en))
-8. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
-9. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
-10. CART (Cardiac Arrest Risk Triage) Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/CART_score_guideline/1?language=en))
+1. Villalta Score for Post-thrombotic Syndrome (PTS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/villalta_score/1?language=en))
+2. Elderly Mobility Scale (EMS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EMS/1?language=en))
+3. Pediatric Trauma BIG Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Pediatric_trauma_BIG_score/1?language=en))
+4. MAGGIC Risk Calculator for Heart Failure - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/MAGGIC_Risk_Calculator_for_Heart_Failure_guideline/1?language=en))
+5. Acute Decompensated Heart Failure National Registry (ADHERE) Algorithm - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Acute_decompensated_heart_failure_national_registry_adhere_algorithm.v0.gdl2/0?language=en))
+6. Patient Activity Scale II (PAS II) for RA - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Patient_Activity_Scale_II_PAS_II_for_RA_guideline/1?language=en))
+7. BISAP Score for Pancreatitis Mortality - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/BISAP_score/1?language=en))
+8. NEXUS Chest Decision Instrument for Blunt Chest Trauma - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Nexus_chest_decision_instrument_for_blunt_chest_trauma/1?language=en))
+9. EVendo Score for Esophageal Varices - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/EVendo_Score_for_Esophageal_Varices/1?language=en))
+10. Simplified Acute Physiology Score-II (SAPS-II) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/SAPS-II_Score/1?language=en))
 
 ----------
 
@@ -691,6 +691,8 @@ _Select a medical specialty below to view the available apps._
 * Therapeutic Plasmapheresis Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/guideline/Therapeutic_Plasmapheresis_Calculator?version=1&languageCode=en))
 
 * Transferrin Saturation Calculator - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/Transferrin_Saturation_Calculator/1?language=en))
+
+* Villalta Score for Post-thrombotic Syndrome (PTS) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/villalta_score/1?language=en))
 
 ----------
 
