@@ -11,8 +11,8 @@ description
 	original_author = <
 		["date"] = <"2020-06-12">
 		["name"] = <"Konstantinos Kalliamvakos">
-		["email"] = <"konstantinos.kalliamvakos@cambio.se">
 		["organisation"] = <"Cambio CDS">
+		["email"] = <"konstantinos.kalliamvakos@cambio.se">
 	>
 	lifecycle_state = <"Author draft">
 	details = <
@@ -28,11 +28,12 @@ description
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Tabak YP, Sun X, Johannes RS, Gupta V, Shorr AF. Mortality and need for mechanical ventilation in acute exacerbations of chronic obstructive pulmonary disease: development and validation of a simple risk score. Arch Intern Med. 2009 Sep 28;169(17):1595-602. doi: 10.1001/archinternmed.2009.270. PMID: 19786679.">
+		["current_contact"] = <"Konstantinos Kalliamvakos, Cambio CDS<konstantinos.kalliamvakos@cambio.se>">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1683853cbdc4e8f52aef5167a14a8a9c">
 		["build_uid"] = <"2cdc63fe-207c-368e-9828-ecfc8d9e488a">
-		["current_contact"] = <"Konstantinos Kalliamvakos, Cambio CDS<konstantinos.kalliamvakos@cambio.se>">
 	>
 
 definition
@@ -106,6 +107,7 @@ ontology
 				["at0000"] = <
 					text = <"BAP-65 score for acute exacerbation of COPD">
 					description = <"An assessment tool to predict mortality in acute COPD exacerbation.">
+					comment = <"Original version, c 2009.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -113,7 +115,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"\"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
 					text = <"Tree">
