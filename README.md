@@ -134,7 +134,7 @@ _Select a medical specialty below to view the available apps._
 ### Cardiology
 
 ----------
-* ABC Stroke Risk Score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/ABC_stroke_risk_score/1?language=en))
+* ABC-stroke score - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/abc_stroke_score/1?language=en))
 
 * ACC/AHA Heart Failure Staging - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/ACC-AHA_Heart_Failure_Staging/1?language=en))
 
