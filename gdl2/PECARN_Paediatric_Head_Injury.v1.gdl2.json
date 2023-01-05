@@ -90,8 +90,8 @@
       },
       "gt0023": {
         "id": "gt0023",
-        "model_id": "openEHR-EHR-EVALUATION.recommendation.v2",
-        "template_id": "openEHR-EHR-EVALUATION.recommendation.v2",
+        "model_id": "openEHR-EHR-EVALUATION.recommendation_pecarn_pediatric_head_injury.v2",
+        "template_id": "openEHR-EHR-EVALUATION.recommendation_pecarn_pediatric_head_injury.v2",
         "type": "OUTPUT",
         "elements": {
           "gt0024": {
