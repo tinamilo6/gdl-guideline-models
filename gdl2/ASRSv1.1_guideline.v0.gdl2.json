@@ -85,8 +85,8 @@
       },
       "gt0013": {
         "id": "gt0013",
-        "model_id": "openEHR-EHR-EVALUATION.health_risk.v1",
-        "template_id": "openEHR-EHR-EVALUATION.health_risk.v1",
+        "model_id": "openEHR-EHR-EVALUATION.health_risk_asrs.v1",
+        "template_id": "openEHR-EHR-EVALUATION.health_risk_asrs.v1",
         "type": "OUTPUT",
         "elements": {
           "gt0014": {
