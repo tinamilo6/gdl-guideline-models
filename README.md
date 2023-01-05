@@ -1298,7 +1298,7 @@ _Select a medical specialty below to view the available apps._
 
 * DSM-5 Criteria for Major Depressive Disorder - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/DSM_5_Criteria_for_Major_Depressive_Disorder_guideline/1?language=en))
 
-* DSM-5 Criteria for Posttraumatic Stress Disorder  - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/DSM_5_Criteria_for_Posttraumatic_Stress_Disorder_guideline/1?language=en))
+* DSM-5 Criteria for Posttraumatic Stress Disorder  - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/DSM_5_PTSD/1?language=en))
 
 * Generalized Anxiety Disorder Score (GAD-7) - ([_ENG_](https://development.cds-platform.com/ckm/clinical-knowledge-manager/demo/view/GAD-7/1?language=en))
 
