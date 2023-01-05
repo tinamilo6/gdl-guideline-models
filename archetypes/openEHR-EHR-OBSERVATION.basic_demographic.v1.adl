@@ -88,7 +88,9 @@ description
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
-			copyright = <"© openEHR Foundation">
+			purpose = <"Para registrar la información personal básica de los pacientes, como el sexo, la fecha de nacimiento o el lugar de residencia.">
+			keywords = <"datos demográficos","paciente","edad","género","residencia","fecha de nacimiento">
+			copyright = <"Cambio Healthcare Systems">
 		>
 	>
 	other_details = <
