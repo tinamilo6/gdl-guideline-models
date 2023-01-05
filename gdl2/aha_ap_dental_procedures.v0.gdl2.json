@@ -151,8 +151,8 @@
       },
       "gt0148": {
         "id": "gt0148",
-        "model_id": "openEHR-EHR-EVALUATION.recommendation.v2",
-        "template_id": "openEHR-EHR-EVALUATION.recommendation.v2",
+        "model_id": "openEHR-EHR-EVALUATION.recommendation_aha_antibiotics_prophylaxis.v2",
+        "template_id": "openEHR-EHR-EVALUATION.recommendation_aha_antibiotics_prophylaxis.v2",
         "type": "OUTPUT",
         "elements": {
           "gt0149": {
