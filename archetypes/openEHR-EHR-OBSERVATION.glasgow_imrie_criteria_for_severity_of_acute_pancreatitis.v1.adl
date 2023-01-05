@@ -2,7 +2,7 @@ archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.glasgow_imrie_criteria_for_severity_of_acute_pancreatitis.v1
 
 concept
-	[at0000]	-- Glasgow Imries kriterier för bedömning av akut pankreatit
+	[at0000]	-- Glasgow imrie criteria for severity of acute pancreatitis
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -23,40 +23,6 @@ description
 		["date"] = <"2017-11-02">
 	>
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"The Glasgow-Imrie Criteria for Severity of Acute Pancreatitis provides an assessment of the severity of pancreatitis using 8 laboratory values">
-			use = <"The tool uses 8 lab values as shown below. Each variable is score 0 or 1 and the tool sums the scores for a range of 0 to 8.
-
-Useful mnemonic: PANCREAS
-    PaO2< 7.9kPa
-    Age > 55 years
-    Neutrophils (WBC > 15 x 10⁹/L)
-    Calcium < 2 mmol/L
-    Renal function: Urea > 16 mmol/L
-    Enzymes LDH > 600 IU/L
-    Albumin < 32 g/L (serum)
-    Sugar (blood glucose) > 10 mmol/L
-
-Scores ≥3 suggest increased likelihood of severe pancreatitis
-Scores < 3 suggest decreased likelihood of severe pancreatitis
-
-Score interpretation:
-
-Score 		Severe Pancreatitis*
-0 		7%
-1 		6%
-2 		16%
-3 	 	20%
-4 	 	61%
-5 	 	55%
-6 		100%
-7 		0%
-8 	 	100%">
-			keywords = <"Glasgow imrie criteria for severity of acute pancreatitis", "acute pancreatitis">
-			misuse = <"Do not use sooner than 48 hours from presentation">
-			copyright = <"© Cambio Healthcare Systems">
-		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Att i enlighet med Glasgow-Imries kriterier utvärdera svårighetsgrad av akut pankreatit baserat på åtta laborationsparametrar.">
@@ -91,79 +57,110 @@ Poäng	Svår pankreatit*
 			misuse = <"Endast tillämpbar först 48h efter initial bedömning.">
 			copyright = <"© Cambio Healthcare Systems">
 		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The Glasgow-Imrie Criteria for Severity of Acute Pancreatitis provides an assessment of the severity of pancreatitis using 8 laboratory values">
+			use = <"The tool uses 8 lab values as shown below. Each variable is score 0 or 1 and the tool sums the scores for a range of 0 to 8.
+
+Useful mnemonic: PANCREAS
+    PaO2< 7.9kPa
+    Age > 55 years
+    Neutrophils (WBC > 15 x 10⁹/L)
+    Calcium < 2 mmol/L
+    Renal function: Urea > 16 mmol/L
+    Enzymes LDH > 600 IU/L
+    Albumin < 32 g/L (serum)
+    Sugar (blood glucose) > 10 mmol/L
+
+Scores ≥3 suggest increased likelihood of severe pancreatitis
+Scores < 3 suggest decreased likelihood of severe pancreatitis
+
+
+1 		6%
+2 		16%
+3 	 	20%
+4 	 	61%
+5 	 	55%
+6 		100%
+7 		0%
+8 	 	100%">
+			keywords = <"Glasgow imrie criteria for severity of acute pancreatitis", "acute pancreatitis">
+			misuse = <"Do not use sooner than 48 hours from presentation">
+			copyright = <"© Cambio Healthcare Systems">
+		>
 	>
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"Ref. 1: Blamey SL, Imrie CW, O'Neill J, Gilmour WH, Carter DC. Prognostic factors in acute pancreatitis. Gut. 1984 Dec;25(12):1340-6.">
-		["MD5-CAM-1.0.1"] = <"559B37649F38AF295EE06C9F0738095A">
+		["MD5-CAM-1.0.1"] = <"8D315DCD27DE9FFCF8C5A11F15AEFBEB">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Glasgow Imries kriterier för bedömning av akut pankreatit
+	OBSERVATION[at0000] matches {	-- Glasgow imrie criteria for severity of acute pancreatitis
 		data matches {
-			HISTORY[at0001] matches {	-- *Event Series(en)
+			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- *Any event(en)
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- *Tree(en)
+							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- PaO₂ <59.3 mmHg (7.9 kPa) - poäng
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- PaO₂ <59.3 mmHg (7.9 kPa)
 										value matches {
-											0|[local::at0028], 	-- Nej
-											1|[local::at0029]  	-- Ja
+											0|[local::at0028], 	-- No
+											1|[local::at0029]  	-- Yes
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Ålder >55 år - poäng
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Age >55 years
 										value matches {
-											0|[local::at0026], 	-- Nej
-											1|[local::at0027]  	-- Ja
+											0|[local::at0026], 	-- No
+											1|[local::at0027]  	-- Yes
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {	-- LPK >15 x 10³/µl (10⁹/l) - poäng
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- WBC >15 x 10³/µL (10⁹/L)
 										value matches {
-											0|[local::at0024], 	-- Nej
-											1|[local::at0025]  	-- Ja
+											0|[local::at0024], 	-- No
+											1|[local::at0025]  	-- Yes
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Kalcium <8 mg/dl (2 mmol/l) - poäng
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Calcium <8 mg/dL (2 mmol/L)
 										value matches {
-											0|[local::at0022], 	-- Nej
-											1|[local::at0023]  	-- Ja
+											0|[local::at0022], 	-- No
+											1|[local::at0023]  	-- Yes
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Urea >44.8 mg/dl (16 mmol/l) - poäng
+									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Urea >44.8 mg/dL (16 mmol/L)
 										value matches {
-											0|[local::at0020], 	-- Nej
-											1|[local::at0021]  	-- Ja
+											0|[local::at0020], 	-- No
+											1|[local::at0021]  	-- Yes
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- LDH >600 IU/l - poäng
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- LDH >600 IU/L
 										value matches {
-											0|[local::at0018], 	-- Nej
-											1|[local::at0019]  	-- Ja
+											0|[local::at0018], 	-- No
+											1|[local::at0019]  	-- Yes
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Albumin <3.2 g/dl (32 g/l) - poäng
+									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Albumin <3.2 g/dL (32 g/L)
 										value matches {
-											0|[local::at0016], 	-- Nej
-											1|[local::at0017]  	-- Ja
+											0|[local::at0016], 	-- No
+											1|[local::at0017]  	-- Yes
 										}
 									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Glukos >180 mg/dl (10 mmol/l) - poäng
+									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Glucose >180 mg/dL (10 mmol/L)
 										value matches {
-											0|[local::at0014], 	-- Nej
-											1|[local::at0015]  	-- Ja
+											0|[local::at0014], 	-- No
+											1|[local::at0015]  	-- Yes
 										}
 									}
-									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Poängsumma
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Total score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..8|}
 											}
 										}
 									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Kommentar
+									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comments
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -198,35 +195,35 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"PaO₂ <59.3 mmHg (7.9 kPa) Score">
+					text = <"PaO₂ <59.3 mmHg (7.9 kPa)">
 					description = <"PaO₂ <59.3 mmHg (7.9 kPa) Score">
 				>
 				["at0005"] = <
-					text = <"Age >55 years Score">
+					text = <"Age >55 years">
 					description = <"Age >55 years Score">
 				>
 				["at0006"] = <
-					text = <"WBC >15 x 10³/µL (10⁹/L) Score">
+					text = <"WBC >15 x 10³/µL (10⁹/L)">
 					description = <"WBC >15 x 10³/µL (10⁹/L) score">
 				>
 				["at0007"] = <
-					text = <"Calcium <8 mg/dL (2 mmol/L) Score">
+					text = <"Calcium <8 mg/dL (2 mmol/L)">
 					description = <"Calcium <8 mg/dL (2 mmol/L) Score">
 				>
 				["at0008"] = <
-					text = <"Urea >44.8 mg/dL (16 mmol/L) Score">
+					text = <"Urea >44.8 mg/dL (16 mmol/L)">
 					description = <"Urea >44.8 mg/dL (16 mmol/L) Score">
 				>
 				["at0009"] = <
-					text = <"LDH >600 IU/L Score">
+					text = <"LDH >600 IU/L">
 					description = <"LDH >600 IU/L Score">
 				>
 				["at0010"] = <
-					text = <"Albumin <3.2 g/dL (32 g/L) Score">
+					text = <"Albumin <3.2 g/dL (32 g/L)">
 					description = <"Albumin <3.2 g/dL (32 g/L) Score">
 				>
 				["at0011"] = <
-					text = <"Glucose >180 mg/dL (10 mmol/L) Score">
+					text = <"Glucose >180 mg/dL (10 mmol/L)">
 					description = <"Glucose >180 mg/dL (10 mmol/L) Score">
 				>
 				["at0012"] = <
@@ -322,36 +319,36 @@ ontology
 					description = <"*@ internal @(en)">
 				>
 				["at0004"] = <
-					text = <"PaO₂ <59.3 mmHg (7.9 kPa) - poäng">
-					description = <"">
+					text = <"*PaO₂ <59.3 mmHg (7.9 kPa)(en)">
+					description = <"*PaO₂ <59.3 mmHg (7.9 kPa) Score(en)">
 				>
 				["at0005"] = <
-					text = <"Ålder >55 år - poäng">
-					description = <"">
+					text = <"*Age >55 years(en)">
+					description = <"*Age >55 years Score(en)">
 				>
 				["at0006"] = <
-					text = <"LPK >15 x 10³/µl (10⁹/l) - poäng">
-					description = <"">
+					text = <"*WBC >15 x 10³/µL (10⁹/L)(en)">
+					description = <"*WBC >15 x 10³/µL (10⁹/L) score(en)">
 				>
 				["at0007"] = <
-					text = <"Kalcium <8 mg/dl (2 mmol/l) - poäng">
-					description = <"">
+					text = <"*Calcium <8 mg/dL (2 mmol/L)(en)">
+					description = <"*Calcium <8 mg/dL (2 mmol/L) Score(en)">
 				>
 				["at0008"] = <
-					text = <"Urea >44.8 mg/dl (16 mmol/l) - poäng">
-					description = <"">
+					text = <"*Urea >44.8 mg/dL (16 mmol/L)(en)">
+					description = <"*Urea >44.8 mg/dL (16 mmol/L) Score(en)">
 				>
 				["at0009"] = <
-					text = <"LDH >600 IU/l - poäng">
-					description = <"">
+					text = <"*LDH >600 IU/L(en)">
+					description = <"*LDH >600 IU/L Score(en)">
 				>
 				["at0010"] = <
-					text = <"Albumin <3.2 g/dl (32 g/l) - poäng">
-					description = <"">
+					text = <"*Albumin <3.2 g/dL (32 g/L)(en)">
+					description = <"*Albumin <3.2 g/dL (32 g/L) Score(en)">
 				>
 				["at0011"] = <
-					text = <"Glukos >180 mg/dl (10 mmol/l) - poäng">
-					description = <"">
+					text = <"*Glucose >180 mg/dL (10 mmol/L)(en)">
+					description = <"*Glucose >180 mg/dL (10 mmol/L) Score(en)">
 				>
 				["at0012"] = <
 					text = <"Poängsumma">
@@ -363,67 +360,67 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0015"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0016"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0017"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0018"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0019"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0020"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0021"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0022"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0023"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0024"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0025"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0026"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0027"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 				["at0028"] = <
 					text = <"Nej">
-					description = <"">
+					description = <"*">
 				>
 				["at0029"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"*">
 				>
 			>
 		>
