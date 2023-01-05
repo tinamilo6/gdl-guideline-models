@@ -95,6 +95,11 @@ language
 			>
 			accreditation = <"Nurse Informatics, MD">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -311,6 +316,10 @@ In sommige situaties wordt de Body Mass Index formule gecorrigeerd, b.v. voor ge
 Zie de WHO richtlijnen tot aanpassing van hoogte / lengte voor Body Mass Index in de pediatrie.
 Bij kinderen en tieners, dient de BMI te worden beoordeeld met behulp van leeftijd-gerelateerde referentie lijsten.">
 			misuse = <"Niet bestemd voor het registreren van informatie over de Body Mass Index percentielen - deze zullen worden opgenomen in afzonderlijke archetypen.">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -1402,6 +1411,74 @@ ontology
 				["at0018"] = <
 					text = <"*<18.5 (en)">
 					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Indice de masa corporal">
+					description = <"*Calculated measurement which compares a person's weight and height. (en)">
+					comment = <"*Body Mass Index is a calculated ratio describing how an individual's body weight relates to the weight that is regarded as normal, or desirable, for the individual's height. (en)">
+				>
+				["at0001"] = <
+					text = <"history">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0003"] = <
+					text = <"Single">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Indice de masa corporal">
+					description = <"*Index describing ratio of weight to height. (en)">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Metodo">
+					description = <"*The method of entering the body mass index. (en)">
+				>
+				["at0007"] = <
+					text = <"*Automatic entry (en)">
+					description = <"*Body Mass Index calculated and entered automatically without user intervention. (en)">
+				>
+				["at0008"] = <
+					text = <"*Direct entry (en)">
+					description = <"*Body Mass Index calculated and entered directly by user. (en)">
+				>
+				["at0010"] = <
+					text = <"Formula">
+					description = <"*Formula used to derive the body mass index. (en)">
+				>
+				["at0011"] = <
+					text = <"*Confounding factors (en)">
+					description = <"*Narrative description of any issues or factors that may impact on the calculation. (en)">
+					comment = <"*For example: the calculation was made using adjusted weight or height. (en)">
+				>
+				["at0012"] = <
+					text = <"Comentarios">
+					description = <"*Additional narrative about the calculation, not captured in other fields. (en)">
+				>
+				["at0013"] = <
+					text = <"Interpretacion clinica">
+					description = <"*Single word, phrase or brief description that represents the clinical meaning and significance of the body mass index. (en)">
+					comment = <"*For example: underweight, normal, overweight or obese. (en)">
+				>
+				["at0014"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0015"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 			>
 		>
