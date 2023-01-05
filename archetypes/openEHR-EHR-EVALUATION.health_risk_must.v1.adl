@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=70e1c139-739e-42be-992a-bb1891d222e8)
-	openEHR-EHR-EVALUATION.health_risk.v1
+	openEHR-EHR-EVALUATION.health_risk_must.v1
 
 concept
 	[at0000]
