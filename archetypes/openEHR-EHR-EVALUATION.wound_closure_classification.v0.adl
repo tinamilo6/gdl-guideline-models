@@ -7,76 +7,67 @@ language
 	original_language = <[ISO_639-1::en]>
 description
 	original_author = <
-		["name"] = <"Therese Lindberg">
-		["email"] = <"therese.lindberg@cambio.se">
+		["name"] = <"Maryam Razavi">
+		["email"] = <"maryam.razavi@cambio.se">
 		["organisation"] = <"Cambio CDS">
-		["date"] = <"2021-01-05">
+		["date"] = <"2020-12-14">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To classify types of wound closure.">
-			use = <"Use in patients with open wounds, with a focus on wounds resulting from trauma.
-
-Wound Features:                                                                              Classification:
-1. Clean wound with minimal tissue loss, e.g. surgical                          Primary
- wounds, clean lacerations.
-2. Significant tissue loss precluding tension-free approximation             Secondary
-of edges, devitalized edges, ulcerations, or abscess cavities.
-3. Grossly contaminated wounds with or without significant tissue          Tertiary (Delayed Primary)
- loss, e.g. contaminated by soil or feces, animal bites, projectiles.">
-			keywords = <"wound closure classification", "surgical", "trauma">
+			purpose = <"To record the Wound closure classification variable (wound features) as well as its interpretations (classifications and management). ">
+			use = <"Used to record the Wound closure classification variable (wound features) as well as its interpretations (classifications and management) in patients with open wounds, with a focus on wounds resulting from trauma.">
+			keywords = <"wound ", "General Surgery", "acute wounds", "classification", "management">
 			misuse = <"">
 			copyright = <"@CambioCDS">
 		>
 	>
-	lifecycle_state = <"0">
+	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"1. Kumar S, Leaper DJ. Classification and management of acute wounds. Surgery (Oxford). 2005 Feb 1; 23(2):47-51.
 2. ACS TQIP. Best Practices in the Management of Orthopedic Trauma. ACS TQIP Best Practice Guidelines website. 
 3. Bhangu A, Singh P, Lundy J, Bowley DM. Systemic Review and Meta-analysis of Randomized Clinical Trials Comparing Primary vs Delayed Primary Skin Closure in Contaminated and Dirty Abdominal Incisions. JAMA Surg. 2013;148(8):779-786.
 4. Halawi MJ, Morwood MP. Acute Management of Open Fractures: An Evidence-Based Review. Orthopedics. 2015;38(11):e1025-33.">
-		["current_contact"] = <"Therese Lindberg, Cambio CDS<therese.lindberg@cambio.se>">
-		["MD5-CAM-1.0.1"] = <"D96E96BAA15FE6E06C404EEA4AD91F9E">
+		["MD5-CAM-1.0.1"] = <"ED72423261A8778EA39D7FD6901F9F35">
 	>
 
 definition
 	EVALUATION[at0000] matches {	-- Wound closure classification
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[at0003] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Wound Features
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Wound Features
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0004, 	-- Clean wounds with minimal tissue loss, e.g. surgical wounds, clean lacerations
-									at0005, 	-- Significant tissue loss precluding tension-free approximation of edges, devitalized edges, ulcerations, or abscess cavities
-									at0006]	-- Grossly contaminated wounds with or without significant tissue loss
+									at0005, 	-- Clean wound with minimal tissue loss, e.g. surgical wounds, clean lacerations.
+									at0006, 	-- Significant tissue loss precluding tension-free approximation of edges, devitalized edges, ulcerations, or abscess cavities.
+									at0007]	-- Grossly contaminated wounds with or without significant tissue loss, e.g. contaminated by soil or feces, animal bites, projectiles.
 								}
 							}
 						}
 					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Classification
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Wound Closure Classification
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0008, 	-- Primary
-									at0009, 	-- Secondary
-									at0010]	-- Tertiary (Delayed Primary)
+									at0009, 	-- Primary
+									at0010, 	-- Secondary
+									at0011]	-- Tertiary (Delayed Primary)
 								}
 							}
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Management
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Management
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0012, 	-- Closure ideally performed within 6-8 hours of trauma. If well-vascularized, may be closed up to 24 hours after trauma.
-									at0013, 	-- No surgical closure. Daily dressing changes. Consider negative pressure vacuum therapy.
+									at0013, 	-- Perform closure within 6-8 hours of trauma. If well-vascularized, may be closed up to 24 hours after trauma.
+									at0014, 	-- No surgical closure. Daily dressing changes. Consider negative pressure vacuum therapy.
 									at0015]	-- Thoroughly explore, irrigate, and debride. Observe for 3-7 days before surgical closure or skin grafting. May benefit from negative pressure vacuum therapy.
 								}
 							}
@@ -85,8 +76,11 @@ definition
 				}
 			}
 		}
+		protocol matches {
+			ITEM_TREE[at0002] matches {*}    -- Item tree
+		}
 	}
-
+			
 ontology
 	term_definitions = <
 		["en"] = <
@@ -96,50 +90,58 @@ ontology
 					description = <"Wound Closure Classification classifies types of wound closure.">
 				>
 				["at0001"] = <
-					text = <"Tree">
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
 					text = <"Wound Features">
 					description = <"*">
 				>
-				["at0004"] = <
-					text = <"Clean wounds with minimal tissue loss, e.g. surgical wounds, clean lacerations">
-					description = <"*">
-				>
 				["at0005"] = <
-					text = <"Significant tissue loss precluding tension-free approximation of edges, devitalized edges, ulcerations, or abscess cavities">
+					text = <"Clean wound with minimal tissue loss, e.g. surgical wounds, clean lacerations.">
 					description = <"*">
 				>
 				["at0006"] = <
-					text = <"Grossly contaminated wounds with or without significant tissue loss">
+					text = <"Significant tissue loss precluding tension-free approximation of edges, devitalized edges, ulcerations, or abscess cavities.">
 					description = <"*">
 				>
 				["at0007"] = <
-					text = <"Classification">
+					text = <"Grossly contaminated wounds with or without significant tissue loss, e.g. contaminated by soil or feces, animal bites, projectiles.">
 					description = <"*">
 				>
 				["at0008"] = <
-					text = <"Primary">
+					text = <"Wound Closure Classification">
 					description = <"*">
 				>
 				["at0009"] = <
-					text = <"Secondary">
-					description = <"*">
+					text = <"Primary">
+					description = <"Healing by primary or first intention. Wound is mechanically closed by approximation of wound edges.">
 				>
 				["at0010"] = <
-					text = <"Tertiary (Delayed Primary)">
-					description = <"*">
+					text = <"Secondary">
+					description = <"Healing by secondary or second intention. Wound is left open to heal largely by the formation of granulation tissue and contraction.">
 				>
 				["at0011"] = <
+					text = <"Tertiary (Delayed Primary)">
+					description = <"Healing by tertiary or third intention. Delayed closure of a wound after a variable period of time for which it has been left open.">
+				>
+				["at0012"] = <
 					text = <"Management">
 					description = <"*">
 				>
-				["at0012"] = <
-					text = <"Closure ideally performed within 6-8 hours of trauma. If well-vascularized, may be closed up to 24 hours after trauma.">
+				["at0013"] = <
+					text = <"Perform closure within 6-8 hours of trauma. If well-vascularized, may be closed up to 24 hours after trauma.">
 					description = <"*">
 				>
-				["at0013"] = <
+				["at0014"] = <
 					text = <"No surgical closure. Daily dressing changes. Consider negative pressure vacuum therapy.">
 					description = <"*">
 				>

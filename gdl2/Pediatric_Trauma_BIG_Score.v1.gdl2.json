@@ -1,5 +1,5 @@
 {
-  "id": "Pediatric_Trauma_BIG_Score.v1",
+  "id": "Pediatric_trauma_BIG_score.v1",
   "gdl_version": "2.0",
   "concept": "gt0001",
   "language": {
@@ -19,20 +19,14 @@
     "details": {
       "en": {
         "id": "en",
-        "purpose": "Stratifies severity of illness and predicts mortality in pediatric patients after trauma.",
-        "keywords": [
-          "blunt injury",
-          "trauma",
-          "penetrating injury",
-          "blast injury"
-        ],
-        "use": "Use in Pediatric patients under 18 years of age, after blunt or penetrating trauma or penetrating blast injury. \nBIG is an acronym for the components of the score: base deficit, INR, and GCS.\n\nThree variables, the base deficit, international normalized ratio (INR), and Glasgow Coma Scale (GCS) were found to be independently predictive of mortality. A model score was then derived using data from 707 pediatric patients and evaluated for mortality by using a receiver-operating curve (ROC) analysis. In the guidleine the three variables are used to predict mortality by using the formula: Pediatric BIG Score = (base deficit) + (2.5 × INR) + (15 - GCS). The resultant score is output as a percentage.\n\nThe GCS score is simple, rapid, and accurate scoring system to evaluate the severity of illness and predict mortality in children and can be applied to both blunt and penetrating traumatic injuries.\n\nUseful in quantifying degree of physiological derangement beyond clinical appearance and GCS alone. Base deficit and INR are physiologic measures of hypoperfusion and trauma-induced coagulopathy, respectively, and both play critical roles in trauma-related mortality.",
-        "misuse": "BIG Score alone should not direct clinical care because patients with BIG Scores <16 still require intensive care and trauma surgery services and should receive care at level 1 pediatric trauma centers (Davis 2015).\n",
-        "copyright": "Cambio Healthcare Systems"
+        "purpose": "To calculate the Pediatric trauma BIG Score which helps to rapidly assess the severity of illness and predict mortality in pediatric trauma patients.",
+        "use": "Pediatric patients under 18 years of age, after blunt or penetrating trauma or penetrating blast injury. \nBIG is an acronym for the components of the score: base deficit, INR, and GCS.",
+        "misuse": "BIG Score alone should not direct clinical care because patients with BIG Scores <16 still require intensive care and trauma surgery services and should receive care at level 1 pediatric trauma centers (Davis 2015).\n"
       }
     },
     "other_details": {
-      "references": "Borgman MA, Maegele M, Wade CE, Blackbourne LH, Spinella PC. Pediatric Trauma BIG Score: Predicting Mortality in Children After Military and Civilian Trauma. Pediatrics. 2011 Apr;127(4):e892-7.\t\t\n\nValidation\nDavis AL, Wales PW, Malik T, Stephens D, Razik F, Schuh S. The BIG Score and Prediction of Mortality in Pediatric Blunt Trauma. J Pediatr. 2015 Sep;167(3):593-8. \n\nGrandjean-blanchet C, Emeriaud G, Beaudin M, Gravel J. Retrospective evaluation of the BIG score to predict mortality in pediatric blunt trauma. CJEM. 2017:1-8.\n"
+      "references": "Borgman MA, Maegele M, Wade CE, Blackbourne LH, Spinella PC. Pediatric trauma BIG score: predicting mortality in children after military and civilian trauma. Pediatrics. 2011 Apr;127(4):e892-7. doi: 10.1542/peds.2010-2439. Epub 2011 Mar 21. PMID: 21422095."
+
     }
   },
   "definition": {
@@ -45,60 +39,98 @@
         "elements": {
           "gt0003": {
             "id": "gt0003",
-            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0005]"
+
+            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0004]"
           },
           "gt0004": {
             "id": "gt0004",
             "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0006]"
-          },
-          "gt0005": {
-            "id": "gt0005",
-            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0004]"
           }
         }
       },
-      "gt0009": {
-        "id": "gt0009",
+      "gt0005": {
+        "id": "gt0005",
+        "model_id": "openEHR-EHR-OBSERVATION.lab_test-coagulation_profile.v1",
+        "template_id": "openEHR-EHR-OBSERVATION.lab_test-coagulation_profile.v1",
+        "type": "INPUT",
+        "elements": {
+          "gt0006": {
+            "id": "gt0006",
+            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0.94]"
+          }
+        }
+      },
+      "gt0007": {
+        "id": "gt0007",
         "model_id": "openEHR-EHR-OBSERVATION.pediatric_trauma_big_score.v0",
         "template_id": "openEHR-EHR-OBSERVATION.pediatric_trauma_big_score.v0",
         "type": "OUTPUT",
         "elements": {
+          "gt0008": {
+            "id": "gt0008",
+            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0007]"
+          },
+          "gt0009": {
+            "id": "gt0009",
+            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0008]"
+          }
+        }
+      },
+      "gt0010": {
+        "id": "gt0010",
+        "model_id": "openEHR-EHR-OBSERVATION.basic_demographic.v1",
+        "template_id": "openEHR-EHR-OBSERVATION.basic_demographic.v1",
+        "type": "INPUT",
+        "elements": {
           "gt0011": {
             "id": "gt0011",
-            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0008]"
-          },
-          "gt0015": {
-            "id": "gt0015",
-            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0009]"
+            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0013]"
           }
         }
       }
     },
+    "pre_conditions": [
+      "$gt0011|Age|<18,a"
+    ],
     "rules": {
-      "gt0008": {
-        "id": "gt0008",
-        "priority": 2,
+      "gt0012": {
+        "id": "gt0012",
+        "priority": 3,
         "when": [
-          "$gt0003|INR|!=null",
-          "$gt0004|GCS|!=null",
-          "$gt0005|Base deficit|!=null",
-          "$gt0005|Base deficit|.unit=='mmol/l'"
+          "$gt0003|Base deficit|!=null",
+          "$gt0006|INR|!=null",
+          "$gt0004|GCS|!=null"
         ],
         "then": [
-          "$gt0015|Total score|.magnitude=$gt0005.magnitude+2.5*$gt0003+(15-$gt0004)",
-          "$gt0015|Total score|.precision=1"
+          "$gt0008|BIG score|.magnitude=$gt0003.magnitude+(2.5*$gt0006.magnitude)+(15-$gt0004)",
+          "$gt0008|BIG score|.precision=2",
+          "$gt0008|BIG score|.unit='1'"
         ]
       },
-      "gt0014": {
-        "id": "gt0014",
-        "priority": 1,
+      "gt0013": {
+        "id": "gt0013",
+        "priority": 2,
         "when": [
-          "$gt0015|Total score|!=null"
+          "$gt0008|BIG score|!=null"
         ],
         "then": [
-          "$gt0011|Predicted In-hospital mortality|.precision=2",
-          "$gt0011|Predicted In-hospital mortality|.unit='%'",
-          "$gt0011|Predicted In-hospital mortality|.magnitude=1/(1+exp(5.208-0.2*$gt0015.magnitude))*100"
+          "$gt0014|B|.magnitude=(0.2*$gt0008.magnitude)-5.208",
+          "$gt0014|B|.precision=2",
+          "$gt0014|B|.unit='1'"
+        ]
+      },
+      "gt0016": {
+        "id": "gt0016",
+        "priority": 1,
+        "when": [
+          "$gt0008|BIG score|!=null",
+          "$gt0014|B|!=null" 
+        ],
+        "then": [
+          "$gt0009|Predicted in-hospital mortality|.magnitude=(1/(1+2.71828^((-1)*$gt0014.magnitude)))*100",
+          "$gt0009|Predicted in-hospital mortality|.precision=1",
+          "$gt0009|Predicted in-hospital mortality|.unit='%'"
+
         ]
       }
     }
@@ -110,51 +142,54 @@
         "terms": {
           "gt0001": {
             "id": "gt0001",
-            "text": "Pediatric trauma big score",
-            "description": "The Pediatric Trauma BIG Score was developed by Borgman et al in 2011 to rapidly assess the severity of illness and predict mortality in pediatric trauma patients.\n\nIt is calculated as:\nPediatric BIG Score = (base deficit) + (2.5 × INR) + (15 - GCS)\n\nThe score is interpreted as:\nPredicted in-hospital mortality = 1/(1 + e-B), where B = 0.2 × (BIG Score) – 5.208\n\nNote: Pediatric BIG Score of 26 (i.e., base deficit 10, INR 3.6, GCS 8) predicts a mortality of 50% with a positive predictive value of 65%, negative predictive value of 93%, and specificity of 99% (Borgman 2011).\n\nDavis et al (2015) report the optimal BIG Score cutoff as 16. Mortality with cutoff <16 was 3/496 (0.6%, 95% CI 0.001-0.007) vs ≥16 which was 47/125 (ROC 38%, 95% CI 0.15-0.7) with p <0.0001. "
+            "description": ""
           },
           "gt0003": {
             "id": "gt0003",
-            "text": "INR",
-            "description": "*"
+            "text": "Base deficit",
+            "description": "Pediatric trauma BIG score is used to Stratify severity of illness and predicts mortality in pediatric patients after trauma."
           },
           "gt0004": {
             "id": "gt0004",
             "text": "GCS",
-            "description": "*"
+            "description": ""
           },
-          "gt0005": {
-            "id": "gt0005",
-            "text": "Base deficit",
-            "description": "*"
+          "gt0006": {
+            "id": "gt0006",
+            "text": "INR",
+            "description": "International Normalized Ratio."
           },
           "gt0008": {
             "id": "gt0008",
-            "text": "Pediatric BIG Score"
+            "text": "BIG score",
+            "description": "Pediatric BIG Score = (base deficit) + (2.5 × INR) + (15 - GCS)."
           },
-          "gt0010": {
-            "id": "gt0010",
-            "text": "Total score",
-            "description": "*"
+          "gt0009": {
+            "id": "gt0009",
+            "text": "Predicted in-hospital mortality",
+            "description": "Predicted in-hospital mortality = 1/(1 + e-B), where B = 0.2 × (BIG Score) – 5.208."
           },
           "gt0011": {
             "id": "gt0011",
-            "text": "Predicted In-hospital mortality",
-            "description": "*"
+            "text": "Age",
+            "description": "Age in years, and for babies: months, weeks or days"
+          },
+          "gt0012": {
+            "id": "gt0012",
+            "text": "Calculate BIG score"
           },
           "gt0013": {
             "id": "gt0013",
-            "text": "B",
-            "description": "B"
+            "text": "Calculate local variable B"
           },
           "gt0014": {
             "id": "gt0014",
-            "text": "Mortality"
+            "text": "B",
+            "description": ""
           },
-          "gt0015": {
-            "id": "gt0015",
-            "text": "Total score",
-            "description": "*"
+          "gt0016": {
+            "id": "gt0016",
+            "text": "Calculate predicted in-hospital mortality"
           }
         }
       }
