@@ -27,7 +27,7 @@ test_cases:
       gt0024|Total score: 0
       gt0022|Regional score: 0
       gt0023|Funtional score: 0
-- id: case_1
+- id: case_2
   input:
     1:
       gt0003|Face and tongue Severity: 1|local::at0008|Mild|
@@ -53,7 +53,7 @@ test_cases:
       gt0024|Total score: 18
       gt0022|Regional score: 14
       gt0023|Funtional score: 4
-- id: case_1
+- id: case_3
   input:
     1:
       gt0003|Face and tongue Severity: 2|local::at0009|Moderate|
@@ -79,7 +79,7 @@ test_cases:
       gt0024|Total score: 36
       gt0022|Regional score: 28
       gt0023|Funtional score: 8
-- id: case_1
+- id: case_4
   input:
     1:
       gt0003|Face and tongue Severity: 3|local::at0010|Severe|
@@ -105,7 +105,7 @@ test_cases:
       gt0024|Total score: 53
       gt0022|Regional score: 41
       gt0023|Funtional score: 12
-- id: case_1
+- id: case_5
   input:
     1:
       gt0003|Face and tongue Severity: 1|local::at0008|Mild|
