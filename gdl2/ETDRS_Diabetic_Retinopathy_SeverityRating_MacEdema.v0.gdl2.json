@@ -28,45 +28,45 @@
     "data_bindings": {
       "gt0002": {
         "id": "gt0002",
-        "model_id": "openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0",
-        "template_id": "openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0",
+        "model_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+        "template_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
         "type": "INPUT",
         "elements": {
           "gt0006": {
             "id": "gt0006",
-            "path": "/items[at0021]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0021]"
           },
           "gt0007": {
             "id": "gt0007",
-            "path": "/items[at0030]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0030]"
           },
           "gt0008": {
             "id": "gt0008",
-            "path": "/items[at0017]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0017]"
           },
           "gt0009": {
             "id": "gt0009",
-            "path": "/items[at0025]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0025]"
           },
           "gt0010": {
             "id": "gt0010",
-            "path": "/items[at0020]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0020]"
           },
           "gt0011": {
             "id": "gt0011",
-            "path": "/items[at0022]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0022]"
           },
           "gt0012": {
             "id": "gt0012",
-            "path": "/items[at0023]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0023]"
           },
           "gt0013": {
             "id": "gt0013",
-            "path": "/items[at0026]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0026]"
           },
           "gt0014": {
             "id": "gt0014",
-            "path": "/items[at0027]"
+            "path": "/data[at0001]/items[openEHR-EHR-CLUSTER.diabetic_retinopathy_classification.v0]/items[at0027]"
           }
         }
       },
