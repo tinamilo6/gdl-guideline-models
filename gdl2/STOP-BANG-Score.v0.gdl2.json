@@ -141,8 +141,8 @@
       },
       "gt0051": {
         "id": "gt0051",
-        "model_id": "openEHR-EHR-EVALUATION.health_risk.v1",
-        "template_id": "openEHR-EHR-EVALUATION.health_risk.v1",
+        "model_id": "openEHR-EHR-EVALUATION.health_risk_stop_bang_score.v1",
+        "template_id": "openEHR-EHR-EVALUATION.health_risk_stop_bang_score.v1",
         "type": "OUTPUT",
         "elements": {
           "gt0052": {
