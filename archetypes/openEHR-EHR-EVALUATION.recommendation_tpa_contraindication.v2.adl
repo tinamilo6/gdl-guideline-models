@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=a15aad41-4ae9-4588-be4e-5c67f83e442f)
-	openEHR-EHR-EVALUATION.recommendation.v2
+	openEHR-EHR-EVALUATION.recommendation_tpa_contraindication.v2
 
 concept
 	[at0000]

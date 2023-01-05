@@ -169,8 +169,8 @@
       },
       "gt0035": {
         "id": "gt0035",
-        "model_id": "openEHR-EHR-EVALUATION.recommendation.v2",
-        "template_id": "openEHR-EHR-EVALUATION.recommendation.v2",
+        "model_id": "openEHR-EHR-EVALUATION.recommendation_tpa_contraindication.v2",
+        "template_id": "openEHR-EHR-EVALUATION.recommendation_tpa_contraindication.v2",
         "type": "OUTPUT",
         "elements": {
           "gt0036": {
