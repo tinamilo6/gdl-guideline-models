@@ -83,7 +83,7 @@ description
 	>
 	other_details = <
 		["current_contact"] = <"Konstantinos Kalliamvakos, Cambio Healthcare Systems, Konstantinos.Kalliamvakos@cambio.se">
-		["MD5-CAM-1.0.1"] = <"6c74aed3a7367fb13dcafb958d5adb5f">
+		["MD5-CAM-1.0.1"] = <"a0b2228d6a7bb2c525396393cabca5b7">
 		["build_uid"] = <"31c33112-73db-3962-8a50-38a03cac72ae">
 	>
 
@@ -96,7 +96,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Gender
+									ELEMENT[at0004] matches {    -- Gender
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
@@ -137,14 +137,14 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0013] matches {    -- Age
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Age
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::128]>
 												list = <
 													["1"] = <
 														units = <"a">
-														magnitude = <|0.0..200.0|>
+														magnitude = <|0.0..250.0|>
 														precision = <|0|>
 													>
 													["2"] = <
