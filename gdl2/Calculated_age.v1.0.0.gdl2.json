@@ -8,7 +8,9 @@
   "description": {
     "original_author": {
       "date": "2019-03-26",
-      "name": "Rong Chen"
+      "name": "Rong Chen",
+      "organisation": "Cambio CDS",
+      "email": "rong.chen@cambio.se"
     },
     "other_contributors": [
 	  "Linda Guttormsdottir"
