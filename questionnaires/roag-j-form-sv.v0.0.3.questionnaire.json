@@ -1,0 +1,625 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "roag-j-form-sv",
+  "identifier": [
+    {
+      "type": {
+        "text": "roag-j-form-sv"
+      }
+    }
+  ],
+  "name": "roag-j-form-sv",
+  "title": "Revised Oral Assessment Guide - Jönköping (ROAG-J)",
+  "version": "0.0.3",
+  "status": "draft",
+  "subjectType": [
+    "QuestionnaireResponse"
+  ],
+  "publisher": "Cambio CDS",
+  "contact": [
+    {
+      "name": "Konstantinos Kalliamvakos",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "konstantinos.kalliamvakos@cambio.se",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Ett riskbedömningsinstrument för att förbättra munhälsan hos äldre.",
+  "useContext": "Används för att registrera resultaten för varje komponentparameter för ROAG-J.",
+  "purpose": "För att registrera resultaten för varje komponentparameter för ROAG-J.",
+  "copyright": "Cambio CDS",
+  "item": [
+    {
+      "linkId": "riskAssessment",
+      "type": "group",
+      "text": "Riskbedömning",
+      "item": [
+        {
+          "linkId": "voice",
+          "type": "choice",
+          "text": "Röst",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0006",
+                "display": "Ej aktuellt att bedöma",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 0
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0007",
+                "display": "Normal",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0008",
+                "display": "Torr, hes, smackande",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0009",
+                "display": "Svårt att tala",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "lips",
+          "type": "choice",
+          "text": "Läppar",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0011",
+                "display": "Lena, ljusröda, fuktiga",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0012",
+                "display": "Torra, spruckna, sår i mungiporna",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0013",
+                "display": "Såriga, blödande",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "mucousMembrane",
+          "type": "choice",
+          "text": "Munslemhinnor",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0015",
+                "display": "Ljusröda, fuktiga",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0016",
+                "display": "Röda, torra eller områden med färgförändring eller beläggning",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0017",
+                "display": "Sår, med eller utan blödning, blåsor",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "tongue",
+          "type": "choice",
+          "text": "Tunga",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0019",
+                "display": "Ljusröd, fuktig med papiller",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0020",
+                "display": "Inga papiller, röd torr, beläggning",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0021",
+                "display": "Sår med eller utan blödning, blåsor",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "gums",
+          "type": "choice",
+          "text": "Tandkött",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0023",
+                "display": "Har inget tandkött, har endast munslemhinna",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 0
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0024",
+                "display": "Ljusrött och fast",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0025",
+                "display": "Svullet, rodnat",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0026",
+                "display": "Spontan blödning",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "teethDentures",
+          "type": "choice",
+          "text": "Tänder",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0028",
+                "display": "Har inga egna tänder",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 0
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0029",
+                "display": "Rena, ingen synlig beläggning eller matrester",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0030",
+                "display": "Beläggning eller matrester lokalt",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0031",
+                "display": "Beläggning, matrester generellt eller trasiga tänder",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "prosthesis",
+          "type": "choice",
+          "text": "Protes",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0033",
+                "display": "Har ingen protes",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 0
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0034",
+                "display": "Ren och fungerar",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0035",
+                "display": "Beläggning eller matrester",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0036",
+                "display": "Används ej eller dåligt fungerande",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saliva",
+          "type": "choice",
+          "text": "Saliv",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0038",
+                "display": "Glider lätt",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0039",
+                "display": "Glider trögt",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0040",
+                "display": "Glider inte alls",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "swallowing",
+          "type": "choice",
+          "text": "Sväljning",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0006",
+                "display": "Ej aktuellt att bedöma",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 0
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0042",
+                "display": "Obehindrad sväljning",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 1
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0043",
+                "display": "Obetydliga sväljproblem",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 2
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "local",
+                "code": "lt0044",
+                "display": "Uttalade sväljproblem",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                    "valueDecimal": 3
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "causes",
+      "type": "group",
+      "text": "Orsaker",
+      "item": [
+        {
+          "linkId": "painInTheOralCavity",
+          "type": "boolean",
+          "text": "Har ont i munnen vid eller mellan måltid"
+        },
+        {
+          "linkId": "impairedSensoryCapacity",
+          "type": "boolean",
+          "text": "Nedsatt känsel i munnen"
+        },
+        {
+          "linkId": "impairedMouthAndFacialMuscles",
+          "type": "boolean",
+          "text": "Nedsatt funktion i mun och ansiktsmuskulatur"
+        },
+        {
+          "linkId": "impairedFunctionInHand",
+          "type": "boolean",
+          "text": "Nedsatt funktion i hand eller arm eller nedsatt allmäntillstånd som försvårar munvård"
+        },
+        {
+          "linkId": "impairedAbilityToUnderstand",
+          "type": "boolean",
+          "text": "Nedsatt förmåga att förstå information och instruktion"
+        },
+        {
+          "linkId": "shortIntervalsBetweenMeals",
+          "type": "boolean",
+          "text": "Korta intervaller mellan måltider"
+        },
+        {
+          "linkId": "otherCauses",
+          "type": "boolean",
+          "text": "Annan orsak"
+        }
+      ]
+    },
+    {
+      "linkId": "sumOf2Points",
+      "type": "integer",
+      "text": "Summa antal 2:or"
+    },
+    {
+      "linkId": "sumOf3Points",
+      "type": "integer",
+      "text": "Summa antal 3:or"
+    },
+    {
+      "linkId": "assessment",
+      "type": "string",
+      "text": "Bedömning"
+    },
+    {
+      "linkId": "recommendation",
+      "type": "string",
+      "text": "Rekommendation"
+    },
+    {
+      "linkId": "dateOfNextAssessment",
+      "type": "dateTime",
+      "text": "Nästa riskbedömningstillfälle"
+    },
+    {
+      "linkId": "carePlanActivation",
+      "type": "choice",
+      "text": "Vårdplan aktivering",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "system": "local",
+            "code": "lt0016",
+            "display": "Ja"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "local",
+            "code": "lt0017",
+            "display": "Nej"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "reasonForManualActivation",
+      "type": "string",
+      "text": "Anledning till att skapa vårdplan"
+    }
+  ]
+}
