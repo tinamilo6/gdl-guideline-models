@@ -1,0 +1,13 @@
+guidelines:
+  "1": bmi_calculation_tutorial.v1.0.0
+test_cases:
+  - id: case_01
+    input:
+      "1":
+        gt0003|Weight: 90,kg
+        gt0004|Event time: 2023-10-23T14:09:36+02:00
+        gt0006|Height/Length: 183,cm
+        gt0007|Event time: 2023-10-23T14:09:36+02:00
+    expected_output:
+      "1":
+        gt0009|Body mass index: 26.87,kg/m2
