@@ -1,0 +1,160 @@
+archetype (adl_version=1.4; uid=c62166f4-10c4-450e-a293-9d7bc938cbab)
+	openEHR-EHR-EVALUATION.iswt_profile.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-05-08">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"71d24eec-dd26-32ab-b57c-194e0d58db1f">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- ISWT_Profile
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Distance_walked
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Pred_HR_Max
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::382]>
+								list = <
+									["1"] = <
+										units = <"/min">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Pred_Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- %of_Pred_Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::507]>
+								list = <
+									["1"] = <
+										units = <"%">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- VO2_Peak
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Peak_Exc_Capacity
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::363]>
+								list = <
+									["1"] = <
+										units = <"W">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0003] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ISWT_Profile">
+					description = <"ISWT_Profile">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Distance_walked">
+					description = <"This parameter is used to store the value of the distance walked by the individual on the ISWT performed in a standardized way.">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Pred_HR_Max">
+					description = <"This parameter stores the predicted maximum heart rate (beats/min) for an individual based on their age (in years).">
+				>
+				["at0005"] = <
+					text = <"Pred_Distance">
+					description = <"This parameter stores the predicted distance that an individual is expected to walk on the ISWT based on their age, gender and body mass index.">
+				>
+				["at0006"] = <
+					text = <"%of_Pred_Distance">
+					description = <"This parameter stores the value of the following:
+%of_Pred_Distance = Distance_walked/ Pred_Distance * 100">
+				>
+				["at0007"] = <
+					text = <"VO2_Peak">
+					description = <"VO2peak=4.19+0.025 (distance walked)
+where VO2peak is in ml•min-1•kg-1 and distance is in meters.
+">
+				>
+				["at0008"] = <
+					text = <"Peak_Exc_Capacity">
+					description = <"W peak = (4.19 + 0.025 × distance walked) × weight.
+where W peak is the peak exercise capacity in watts,
+distance walked is in meters,
+weight is in kg">
+				>
+			>
+		>
+	>
