@@ -1,0 +1,181 @@
+archetype (adl_version=1.4; uid=88f115ca-8c23-4c1b-bd16-8a251e5d7436)
+	openEHR-EHR-EVALUATION.incrementalshuttlewalkingtest_profile.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-05-08">
+		["name"] = <"Shweta Prasad Ghaisas">
+		["organisation"] = <"Karolinska Institutet">
+		["email"] = <"shwetaghaisas@gmail.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To generate a report of all outcome measures that can be reported and predicted from the distance walked by an individual on the ISWT performed in a standardized manner mainly in patients with cardiac or pulmonary dysfunctions.">
+			keywords = <"Incremental Shuttle Walk test, exercise capacity, field walking tests, reference values, exercise test", ...>
+			use = <"The archetype can be used to store the following outcome measures:
+1. Distance walked (Distance_walked): actual distance walked by the individual in the ISWT.
+2. 85% Predicted HR max (Pred_HR_Max): 85% of Maximum heart rate predicted by an equation for an individual based on their age. The test is supposed to be stopped when the person reaches this value as they have reached the maximum permissible limit of exercise for their age. Formula for predicted Maximum heart rate is 210-0.65*age (years)
+3. Predicted ISWT Distance (Pred_Distance): This gives the distance that an individual is expected to walk on the ISWT based on their age, gender and body mass index.
+4. VO2_Peak: This is the measure of exercise capacity of an individual and denotes the highest amount of oxygen consumed at peak exercise. In this archetype, the value of VO2 peak is predicted from the distance walked by the individual during the test.
+5. Peak power output in watts ((Peak_Exc_Capacity): This denotes the ability of an individual perform maximal work in watts and is an important metrics used while prescribing exercises.">
+			misuse = <"1. The archetype should not be used to record values of any other exercise tests like the 6 minute walk test , treadmill test, etc.
+2. The results obtained should always be correlated clinically.
+3. The intention of creating this archetype was for its usage to record outcome measures obtained when the test is performed in adults with cardiac or pulmonary dysfunctions. While the archetype can be used in all patient groups who perform the standardized ISWT, the author requests caution.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"1. Singh SJ, Morgan MDL, Hardman AE, Rowe C, Bardsley PA. Comparison of oxygen uptake during a conventional treadmill test and the shuttle walking test in chronic airflow limitation. Eur Respir J. 1994;7(11):2016-2020.
+2. Arnardóttir RH, Emtner M, Hedenström H, Larsson K, Boman G. Peak exercise capacity estimated from incremental shuttle walking test in patients with COPD: a methodological study. Respir Res. 2006; 7 (127). doi: https://doi.org/10.1186/1465-9921-7-127
+3. Probst VS, Hernandes NA, Teixeira DC, Felcar JM, Mesquita RB, Goncalves CG, et al. Resp. Med. 2012;106(2):243-8.  doi: https://doi.org/10.1016/j.rmed.2011.07.023
+4. Jones N, Campbell E. Clinical exercise testing. Philadelphia: WB Saunders Co.;1975)
+5. Lung Foundation Australia. Patient Assessment [Internet]. Queensland: Lung Foundation Australia. [cited 2024 May 09]. Available from: https://pulmonaryrehab.com.au/patient-assessment/assessing-exercise-capacity/the-incremental-shuttle-walk-test-iswt/#:~:text=Ending%20the%20ISWT,are%20too%20breathless%20to%20continue.
+">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"465867aee43fa1fd4f48aff234fe12c1">
+		["build_uid"] = <"71d24eec-dd26-32ab-b57c-194e0d58db1f">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- incrementalshuttlewalkingtest_profile
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Distance_walked
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- 85%_Pred_HR_Max
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::382]>
+								list = <
+									["1"] = <
+										units = <"/min">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Pred_Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- %of_Pred_Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::507]>
+								list = <
+									["1"] = <
+										units = <"%">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- VO2_Peak
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Peak_Exc_Capacity
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::363]>
+								list = <
+									["1"] = <
+										units = <"W">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0003] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"incrementalshuttlewalkingtest_profile">
+					description = <"IncrementaShuttleWalkingTest_Profile gives a report of all outcome measures related to exercise capacity that are derived from the distance walked by an individual on the Incremental Shuttle Walking Test (ISWT)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Distance_walked">
+					description = <"This parameter is used to store the value of the distance walked by the individual on the ISWT performed in a standardized way.">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"85%_Pred_HR_Max">
+					description = <"This parameter stores the predicted maximum heart rate (beats/min) for an individual based on their age (in years).">
+				>
+				["at0005"] = <
+					text = <"Pred_Distance">
+					description = <"This parameter stores the predicted distance that an individual is expected to walk on the ISWT based on their age, gender and body mass index.">
+				>
+				["at0006"] = <
+					text = <"%of_Pred_Distance">
+					description = <"This parameter stores the value of the following:
+%of_Pred_Distance = Distance_walked/ Pred_Distance * 100">
+				>
+				["at0007"] = <
+					text = <"VO2_Peak">
+					description = <"VO2peak=4.19+0.025 (distance walked)
+where VO2peak is in ml•min-1•kg-1 and distance is in meters.
+">
+				>
+				["at0008"] = <
+					text = <"Peak_Exc_Capacity">
+					description = <"W peak = (4.19 + 0.025 × distance walked) × weight.
+where W peak is the peak exercise capacity in watts,
+distance walked is in meters,
+weight is in kg">
+				>
+			>
+		>
+	>
