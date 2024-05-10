@@ -1,0 +1,140 @@
+archetype (adl_version=1.4; uid=c4dda139-0d80-48ee-870a-2f1e882db9a1)
+	openEHR-EHR-EVALUATION.incremental_shuttle_walk_test.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-05-10">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"5950a4f3-91e6-3cae-a6f8-9157c3a30233">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- incremental_shuttle_walk_test
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Distance Walked
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Predicted HR Max
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Predicted Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- % of Predicted Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::507]>
+								list = <
+									["1"] = <
+										units = <"%">
+										magnitude = <|>=0.0|>
+										precision = <|2|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- VO2 Peak
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Peak Exc Capacity
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::363]>
+								list = <
+									["1"] = <
+										units = <"W">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"incremental_shuttle_walk_test">
+					description = <"incremental_shuttle_walk_test">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Distance Walked">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Predicted HR Max">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Predicted Distance">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"% of Predicted Distance">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"VO2 Peak">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Peak Exc Capacity">
+					description = <"">
+				>
+			>
+		>
+	>
