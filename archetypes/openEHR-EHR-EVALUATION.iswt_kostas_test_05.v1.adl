@@ -1,0 +1,141 @@
+archetype (adl_version=1.4; uid=00a092dd-5f28-4b5f-9bcb-762b05c160b0)
+	openEHR-EHR-EVALUATION.iswt_kostas_test_05.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-05-08">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"163a77fcfb90b4d32f4faffa93b95282">
+		["build_uid"] = <"71d24eec-dd26-32ab-b57c-194e0d58db1f">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- iswt_kostas_test_05
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Distance Walked
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Predicted HR Max
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::382]>
+								list = <
+									["1"] = <
+										units = <"/min">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Predicted Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"m">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- % of Predicted Distance
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::507]>
+								list = <
+									["1"] = <
+										units = <"%">
+										magnitude = <|>0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- VO2 Peak
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0003] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"iswt_kostas_test_05">
+					description = <"ISWT_Profile">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Distance Walked">
+					description = <"This parameter is used to store the value of the distance walked by the individual on the ISWT performed in a standardized way.">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Predicted HR Max">
+					description = <"This parameter stores the predicted maximum heart rate (beats/min) for an individual based on their age (in years).">
+				>
+				["at0005"] = <
+					text = <"Predicted Distance">
+					description = <"This parameter stores the predicted distance that an individual is expected to walk on the ISWT based on their age, gender and body mass index.">
+				>
+				["at0006"] = <
+					text = <"% of Predicted Distance">
+					description = <"This parameter stores the value of the following:
+%of_Pred_Distance = Distance_walked/ Pred_Distance * 100">
+				>
+				["at0007"] = <
+					text = <"VO2 Peak">
+					description = <"VO2peak=4.19+0.025 (distance walked)
+where VO2peak is in ml•min-1•kg-1 and distance is in meters.
+">
+				>
+			>
+		>
+	>
