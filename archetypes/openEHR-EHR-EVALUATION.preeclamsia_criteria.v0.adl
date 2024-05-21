@@ -1,0 +1,158 @@
+archetype (adl_version=1.4; uid=78af092d-0697-454f-9cf9-091ef7a11f8f)
+	openEHR-EHR-EVALUATION.preeclamsia_criteria.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-05-21">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"30346d5469a58bac98f0b51291d9a30f">
+		["build_uid"] = <"063d1dcc-1757-367b-9fba-880582c15f02">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- preeclamsia_criteria
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Urine protein/24 h
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::347]>
+								list = <
+									["1"] = <
+										units = <"g/(24.h)">
+										magnitude = <|0.0..50.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Platelet count u/uL
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::129]>
+								list = <
+									["1"] = <
+										units = <"uL">
+										magnitude = <|0.0..1000000.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- dipstick >2+
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- doubling of the creatinine concentration (no KD)
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Liver transaminases
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Pulmonary edema
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Headache
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Visual symptoms
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0009] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"preeclamsia_criteria">
+					description = <"preeclamsia_criteria">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Description">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Urine protein/24 h">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Platelet count u/uL">
+					description = <"Platelet count <100,000/microL fo preeclamsia">
+				>
+				["at0007"] = <
+					text = <"dipstick >2+">
+					description = <"dipstick ≥2+ if a quantitative measurement is unavailable">
+				>
+				["at0008"] = <
+					text = <"doubling of the creatinine concentration (no KD)">
+					description = <"doubling of the creatinine concentration in the absence of other kidney disease">
+				>
+				["at0009"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0010"] = <
+					text = <"Liver transaminases">
+					description = <"Liver transaminases at least twice the upper limit of the normal concentrations for the local laboratory">
+				>
+				["at0011"] = <
+					text = <"Pulmonary edema">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Headache">
+					description = <"New-onset and persistent headache not accounted for by alternative diagnoses and not responding to usual doses of analgesics">
+				>
+				["at0013"] = <
+					text = <"Visual symptoms">
+					description = <"">
+				>
+			>
+		>
+	>
