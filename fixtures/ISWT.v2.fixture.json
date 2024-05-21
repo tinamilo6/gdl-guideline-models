@@ -1,0 +1,13 @@
+guidelines:
+  "1": ISWT.v2
+test_cases:
+  - id: Test Case BMI 25.97
+    input:
+      "1":
+        gt0003|Gender: local::at0006|Female|
+        gt0004|Age: 18,a
+        gt0006|Height/Length: 152,cm
+        gt0008|Weight: 60,kg
+    expected_output:
+      "1":
+        gt0011|Body mass index: "25.97"
